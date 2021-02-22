@@ -1,1 +1,1 @@
-# chinarjoshi.github.io
+# Chinar Joshi
