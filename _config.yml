@@ -57,15 +57,6 @@ author:
     - label: "Devpost"
       icon: "fas fa-fw fa-link"
       url: "https://devpost.com/chinarjoshi"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/cjoshi_1"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:chinarjoshi7@gmail.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://chinarjoshi.com"
 
 # Site Footer
 footer:

@@ -14,21 +14,21 @@ intro:
  - excerpt: 'Welcome to my personal website, where you can see my projects, resume, and ways to contact me.'
 
 feature_row:
-  - image_path: /assets/images/unsplash-gallery-image-1-th.jpg
+  - image_path: /assets/images/blur-code.png
     alt: "Portfolio image"
     title: "Portfolio"
     excerpt: "My open source software products"
     url: "/portfolio/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/resume.png
     alt: "Resume image"
     title: "Resume"
     excerpt: "My experience and education"
     url: "/resume/"
     btn_label: "Read More"
     btn_class: "btn--primary"
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
+  - image_path: /assets/images/contact.png
     alt: "Phone image"
     title: "Contact"
     excerpt: "How to reach me"

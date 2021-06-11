@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: "Portfolio"
 layout: single
 toc: true
 toc_label: "Navigation"
@@ -8,7 +8,8 @@ read_time: true
 author_profile: true
 
 header:
-  overlay_color: "#252528"
+  overlay_image: /assets/images/code.jpg
+  overlay_filter: "0.5"
 ---
 
 # Portfolio
