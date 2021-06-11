@@ -1,3 +1,16 @@
+---
+title: "Resume"
+layout: single
+toc: true
+toc_label: "Navigation"
+logo: "assets/images/masthead.png"
+read_time: true
+author_profile: true
+
+header:
+  overlay_color: "#252528"
+---
+
 # Portfolio
 These are my showcased software products. All of the projects are MIT licensed and open source on GitHub; if you're interested, contributions are always welcome!
 
