@@ -3,13 +3,23 @@ title: "Portfolio"
 layout: single
 toc: true
 toc_label: "Navigation"
-logo: "assets/images/masthead.png"
 read_time: true
 author_profile: true
+permalink: /portfolio/
 
 header:
   overlay_image: /assets/images/code.jpg
   overlay_filter: "0.5"
+  
+  
+feature_row:
+  - image_path: /assets/images/iotools.png
+    alt: "IOTools logo"
+    title: "IOTools'
+    excerpt: "Intuitive tools for managing internet of things applications"
+    url: "https://chinarjoshi.com/iotools"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 # Portfolio
@@ -21,7 +31,7 @@ Projects currently in progress
 ### IOTools
 _Intuitive tools for managing hobbyist internet of things applications_
 
-Because not all IOT applications need a machete, some only need a chefs knife.
+
 
 
 ### MediaMatch

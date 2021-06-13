@@ -6,6 +6,7 @@ toc_label: "Navigation"
 logo: "assets/images/masthead.png"
 read_time: true
 author_profile: true
+permalink: /resume/
 
 header:
   overlay_color: "#252528"

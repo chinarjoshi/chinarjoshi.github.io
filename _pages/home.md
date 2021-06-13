@@ -1,6 +1,7 @@
 ---
 title: "Chinar Joshi"
 layout: splash
+permalink: /
 
 header:
   overlay_color: "#000"
