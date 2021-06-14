@@ -31,7 +31,7 @@ mediamatch:
     btn_class: "btn--primary"
 
 visual-aid-transducer:
-  - image_path: /assets/images/blur-code.png
+  - image_path: /assets/images/vat.png
     alt: "Visual Aid Transducer Logo"
     title: "Visual Aid Transducer"
     excerpt: "Navigate the world with haptic feedback"
@@ -40,7 +40,7 @@ visual-aid-transducer:
     btn_class: "btn--primary"
     
 pico-and-goliath:
-  - image_path: /assets/images/blur-code.png
+  - image_path: /assets/images/goliath.png
     alt: "Pico and Goliath Logo"
     title: "Pico and Goliath"
     excerpt: "A fast pased competitive 2-player arcade game"
@@ -49,11 +49,20 @@ pico-and-goliath:
     btn_class: "btn--primary"
 
 covid19-date-selector:
-  - image_path: /assets/images/blur-code.png
+  - image_path: /assets/images/virus.png
     alt: "Covid19-Date-Selector Logo"
-    title: "Covid19-Date-Selector"
+    title: "COVID-19 Date Selector"
     excerpt: "Visualize the spread of COVID-19 on a day-by-day basis"
     url: "https://chinarjoshi.com/covid19-date-selector"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+ds-emacs:
+  - image_path: /assets/images/ds-emacs.png
+    alt: "Data Structure Logo"
+    title: "Data Structure Editing Macros"
+    excerpt: "Edit abstract data structures through vi-inspired commands on the terminal"
+    url: "https://chinarjoshi.com/DS-Emacs"
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
@@ -92,3 +101,6 @@ _A fast paced competitive 2-player arcade game_
 _Visualize the spread of COVID-19 on a day-by-day basis_
 {% include feature_row id="covid19-date-selector" type="left" %}
 
+### Data Structure Editing Macros
+_Edit abstract data structures through vi-inspired commands on the terminal_
+{% include feature_row id="ds-emacs" type="right" %}
