@@ -72,7 +72,6 @@ _Section Leader_
  - State Betacon Agriscience (4th place medalist)
  - Most Outstanding ASP Honors Biology Student
  - Gold Award National Spanish Exam
- - Most Outstanding 
  - Most Outstanding Honors Algebra 2 Geometry B Student 2018
  - Superior Performance Fulton Forums (Spanish oral competition) 2018
  - Superior Performance Linguapalooza (Spanish oral competition) 2017
