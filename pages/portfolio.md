@@ -92,7 +92,7 @@ Most internet of things platforms are overkill for non-industrial applications. 
 
 <details>
     <summary>Read more</summary>
-    placeholder
+    <small>IoTools will be deployed to iotools.cc upon completion. You can track its progress at its <a href="https://github.com/chinarjoshi/iotools">GitHub page</a>.</small>
 </details>
 
 {% include feature_row id="iotools" type="left" %}
@@ -104,8 +104,7 @@ It's such a common occurance to want to share a movie or tv show with a friend o
 
 <details>
     <summary>Read more</summary>
-    placeholder
-
+    <small>MediaMatch will be deployed to mediamatch.cc upon completion. You can track its progress at its <a href="https://github.com/chinarjoshi/iotools">GitHub page</a>.</small>
 </details>
 
 {% include feature_row id="mediamatch" type="left" %}
@@ -115,17 +114,48 @@ It's such a common occurance to want to share a movie or tv show with a friend o
 ### Visual Aid Transducer
 _Navigate the world with haptic feedback_
 
+The Visual Aid Transducer (VAT) is a wearable gadget that transduces the distance of obstacles to haptic feedback in order to better visualize one's surroundings. The VAT consists of an Arduino circuit, 3D printed cast, and program to operate the ultrasonic sensors.
+
+<details>
+    <summary>Read More</summary>
+    <small>This project was submitted to <a href="https://lemelson.mit.edu/inventeams">MIT InvenTeam</a> and placed semifinalist.</small>
+    
+    </details>
+
 {% include feature_row id="visual-aid-transducer" type="left" %}
 
 ### Pico and Goliath
 _A fast paced competitive 2-player arcade game_
 
-{% include feature_row id="pico-and-goliath" type="right" %}
+The objective of the game is to hit the ball into the opponent's moving goal 3 times. The combination of the two starkly different character paradigms combined with an innovative physics engine allows for very rich gameplay with a high skill-ceiling. The game is built with PyGame, a python wrapper for the SDL library.
+
+<details>
+    <summary>Read More</summary>
+    <small>This project won first place at <a href="https://lemelson.mit.edu/inventeams">MIT InvenTeam</a> and placed semifinalist.</small>
+</details>
+
+{% include feature_row id="pico-and-goliath" type="left" %}
 
 ### Covid-19 Date Selector
 _Visualize the spread of COVID-19 on a day-by-day basis_
+
+This is a web API to allow the user to visualize a snapshot of the COVID-19 situation in the USA on a specific day. The user can see exactly how many cases there were in a specific county in this snapshot of time. The frontend is built with the Dash framework.
+
+<details>
+    <summary>Read More</summary>
+    placeholder 
+</details>
+
 {% include feature_row id="covid19-date-selector" type="left" %}
 
 ### Data Structure Editing Macros
 _Edit abstract data structures through vi-inspired commands on the terminal_
-{% include feature_row id="ds-emacs" type="right" %}
+
+This command line utility implements two essential data structures, trie and hash-table, in an easy to grok implementation. The program does not rely on the standard template library, so it demonstrates dynamically allocated memory without being cluttered with complex structs.
+
+<details>
+    <summary>Read More</summary>
+    placeholder 
+</details>
+
+{% include feature_row id="ds-emacs" type="left" %}
