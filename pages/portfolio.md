@@ -18,7 +18,7 @@ iotools:
     title: "IOTools"
     excerpt: "Intuitive tools for managing internet of things applications"
     url: "https://chinarjoshi.com/iotools"
-    btn_label: "Read More"
+    btn_label: "Product Page"
     btn_class: "btn--primary"
     
 mediamatch:
@@ -27,7 +27,7 @@ mediamatch:
     title: "MediaMatch"
     excerpt: "Share media reccomendations with friends and family"
     url: "https://chinarjoshi.com/mediamatch"
-    btn_label: "Read More"
+    btn_label: "Product Page"
     btn_class: "btn--primary"
 
 visual-aid-transducer:
@@ -36,7 +36,7 @@ visual-aid-transducer:
     title: "Visual Aid Transducer"
     excerpt: "Navigate the world with haptic feedback"
     url: "https://chinarjoshi.com/visual-aid-transducer"
-    btn_label: "Read More"
+    btn_label: "Product Page"
     btn_class: "btn--primary"
     
 pico-and-goliath:
@@ -45,7 +45,7 @@ pico-and-goliath:
     title: "Pico and Goliath"
     excerpt: "A fast pased competitive 2-player arcade game"
     url: "https://chinarjoshi.com/pico-and-goliath"
-    btn_label: "Read More"
+    btn_label: "Product Page"
     btn_class: "btn--primary"
 
 covid19-date-selector:
@@ -54,7 +54,7 @@ covid19-date-selector:
     title: "COVID-19 Date Selector"
     excerpt: "Visualize the spread of COVID-19 on a day-by-day basis"
     url: "https://chinarjoshi.com/covid19-date-selector"
-    btn_label: "Read More"
+    btn_label: "Product Page"
     btn_class: "btn--primary"
 
 ds-emacs:
@@ -63,27 +63,52 @@ ds-emacs:
     title: "Data Structure Editing Macros"
     excerpt: "Edit abstract data structures through vi-inspired commands on the terminal"
     url: "https://chinarjoshi.com/DS-Emacs"
-    btn_label: "Read More"
+    btn_label: "Product Page"
     btn_class: "btn--primary"
 ---
+<style>
+    blockquote {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    details {
+        margin-bottom: 1em;
+    }
+</style>
 
 # Portfolio
 These are my showcased software products. All of the projects are MIT licensed and open source on GitHub; if you're interested, contributions are always welcome!
 
 ## Ongoing
-Projects currently in progress
+Projects currently in progress ❯
 
-### IOTools
+### IoTools
 _Intuitive tools for managing hobbyist internet of things applications_
+
+> Because not all IoT apps need a machete; some only need a chef's knife
+
+Most internet of things platforms are overkill for non-industrial applications. IoTools serves to provide functionality somewhere between Google Cloud IoT and a personal flask server. IoTools is a one stop shop for communicating to your IoT device, collecting data through HTTP requests, and identifying trends in your data.
+
+<details>
+    <summary>Read more</summary>
+    placeholder
+</details>
 
 {% include feature_row id="iotools" type="left" %}
 
 ### MediaMatch
 _A platform to share media recommendations with friends and family_
 
-What problem does it fix: It's such a common occurance to want to share a movie or tv show with a friend or family member, yet messaging and social media apps don't ade. MediaMatch aims to provide an intuitive, consistent, and powerful interface to share all forms of media on a single platform.
+It's such a common occurance to want to share a movie or tv show with a friend or family member, yet messaging and social media apps don't have adequate functionality for it. MediaMatch aims to provide an intuitive, consistent, and powerful interface to share all forms of media on a single platform.
 
-{% include feature_row id="mediamatch" type="right" %}
+<details>
+    <summary>Read more</summary>
+    placeholder
+
+</details>
+
+{% include feature_row id="mediamatch" type="left" %}
 
 ## Completed
 
