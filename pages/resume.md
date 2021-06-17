@@ -12,55 +12,61 @@ header:
   overlay_color: "#252528"
 ---
 
+<style>
+    .header {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+</style>
+
 ## Education
- - Chattahoochee High School
+ - <div style="text-align:left;">Chattahoochee High School <small style="float:right;"><i>Graduation Date: May 2022</i></small></div>
  - GPA: 100/100
- - Relevant Courses: Harvard CS50 Introduction to Computer Science, AP Computer Science Principles, AP Calculus BC
- - Graduation Date: May 2022
+ - Relevant Courses
+   * Harvard CS50 Introduction to Computer Science
+   * AP Computer Science Principles
+   * AP Calculus BC
 
 <hr>
 
 ## Extracurricular Experience
-
-### Governor's Honors Program 58
+<h3>Governor's Honors Program 58 <small><i>(Georgia state scholarship for gifted students)</i></small></h3>
 _Selected_
  - Accepted into the Governor’s Honors Program in software engineering 
  - Passed 3 rounds of screening/interviews and hosted 5 software products on GitHub as portfolio
  
-### Lemelson-MIT Inventeam
+<h3>Lemelson-MIT Inventeam <small><i>(National competition to invent technological solutions to real-world problems)</i></small></h3>
 _Head Programmer_
  - Acted as lead C++ programmer on a diverse team of 12 to create a wearable gadget that helps visually impaired people
  - Developed routine to transduce distance from surrounding obstacles to strength of DC vibration motors as haptic feedback 
  - Team placed semifinalist in competition with 25 teams remaining
  
-### FCS Tech Competition
+<h3>FCS Tech Competition <small><i>(District competition in technology and engineering subjects)</i></small></h3>
 _1st place medalist in Digital Game Design_
  - Built a digital game in the form of a Pygame application, won 1st place in category
  - Gained experience with Pygame/SDL and GUI applications in Python 
  
-### Georgia Tech Hacklytics
+<h3>Georgia Tech Hacklytics <small><i>(Data-science annual hackathon hosted by GT)</i></small></h3>
  _Competitor_
   - Built a COVID-19 spread visualization tool in the form of a Dash application 
   - Gained experience in data cleansing and visualization using the Pandas and Plotly libraries
   
-### Astronomy Olympiad
+<h3>Astronomy Olympiad <small><i>(Club to teach students to excel on the astronomy competition) </i></small></h3>
 _Vice President_
  - Taught 7 students how to excel on the Astronomy Olympiad, an astronomy competition, through lectures
  - Became an effective leader while guiding other students
  
-### Wizards of Wall Street
+<h3>Wizards of Wall Street <small><i>(Club to teach students about the stock market and general trading tips)</i></small></h3>
 _Vice President_
  - Taught 7 students how to excel on the Astronomy Olympiad, an astronomy competition, through lectures
  - Became an effective leader while guiding other students
 
-### STEM for Special Children
+<h3>STEM for Special Children <small><i>(Club to lead STEM workshops for special children)</i></small></h3>
 _Quartermaster_
  - Taught firsthand STEM to special children while collaborating with 2 local volunteer organizations
  - Purchased and organized materials to effectively lead the 4 workshops held
  
-### Chattahoochee Bands
-(Marching + Jazz + Mastery)
-
+<h3>Chattahoochee Bands <small><i>(Marching + Jazz + Mastery)</i></small></h3>
 _Section Leader_
  - Honed leadership skills through directing students in the section 
  - Developed time management skills through balancing strenuous extracurricular activities with 4 AP courses
