@@ -74,13 +74,13 @@ _Section Leader_
 <hr>
 
 ## Achievements/Awards
- - First Char District Honor Band (Bass Trombone)
- - State Betacon Agriscience (4th place medalist)
+ - First Chair District Honor Band <small>(Bass Trombone)</small>
+ - State Betacon Agriscience <small>(4th place medalist)</small>
  - Most Outstanding ASP Honors Biology Student
  - Gold Award National Spanish Exam
- - Most Outstanding Honors Algebra 2 Geometry B Student 2018
- - Superior Performance Fulton Forums (Spanish oral competition) 2018
- - Superior Performance Linguapalooza (Spanish oral competition) 2017
+ - Most Outstanding Honors Algebra 2 Geometry B Student
+ - Superior Performance Fulton Forums <small>(Spanish oral competition)</small>
+ - Superior Performance Linguapalooza <small>(Spanish oral competition)</small>
  
  <hr>
 
