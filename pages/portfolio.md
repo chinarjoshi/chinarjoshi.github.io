@@ -17,7 +17,7 @@ iotools:
     alt: "IoTools Logo"
     title: "IoTools"
     excerpt: "Intuitive tools for managing internet of things applications"
-    url: "https://chinarjoshi.com/iotools"
+    url: "https://chinarjoshi.com/iotools/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
     
@@ -26,7 +26,7 @@ mediamatch:
     alt: "MediaMatch Logo"
     title: "MediaMatch"
     excerpt: "Share media reccomendations with friends and family"
-    url: "https://chinarjoshi.com/mediamatch"
+    url: "https://chinarjoshi.com/mediamatch/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
 
@@ -35,7 +35,7 @@ visual-aid-transducer:
     alt: "Visual Aid Transducer Logo"
     title: "Visual Aid Transducer"
     excerpt: "Navigate the world with haptic feedback"
-    url: "https://chinarjoshi.com/visual-aid-transducer"
+    url: "https://chinarjoshi.com/visual-aid-transducer/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
     
@@ -44,7 +44,7 @@ pico-and-goliath:
     alt: "Pico and Goliath Logo"
     title: "Pico and Goliath"
     excerpt: "A fast pased competitive 2-player arcade game"
-    url: "https://chinarjoshi.com/pico-and-goliath"
+    url: "https://chinarjoshi.com/pico-and-goliath/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
 
@@ -53,7 +53,7 @@ covid19-date-selector:
     alt: "Covid19-Date-Selector Logo"
     title: "COVID-19 Date Selector"
     excerpt: "Visualize the spread of COVID-19 on a day-by-day basis"
-    url: "https://chinarjoshi.com/covid19-date-selector"
+    url: "https://chinarjoshi.com/covid19-date-selector/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
 
@@ -62,7 +62,7 @@ ds-emacs:
     alt: "Data Structure Logo"
     title: "Data Structure Editing Macros"
     excerpt: "Edit abstract data structures through vi-inspired commands on the terminal"
-    url: "https://chinarjoshi.com/DS-Emacs"
+    url: "https://chinarjoshi.com/ds-emacs/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
 ---
@@ -71,7 +71,6 @@ ds-emacs:
         margin-top: 0px;
         margin-bottom: 0px;
     }
-
     details {
         margin-bottom: 1em;
     }
