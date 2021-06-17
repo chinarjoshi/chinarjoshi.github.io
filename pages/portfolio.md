@@ -118,6 +118,7 @@ It's such a common occurance to want to share a movie or tv show with a friend o
 {% include feature_row id="mediamatch" type="left" %}
 
 ## Completed
+Projects that have been completed ❯
 
 ### Visual Aid Transducer
 _Navigate the world with haptic feedback_
