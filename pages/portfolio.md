@@ -14,8 +14,8 @@ header:
   
 iotools:
   - image_path: /assets/images/blur-code.png
-    alt: "IOTools Logo"
-    title: "IOTools"
+    alt: "IoTools Logo"
+    title: "IoTools"
     excerpt: "Intuitive tools for managing internet of things applications"
     url: "https://chinarjoshi.com/iotools"
     btn_label: "Product Page"
