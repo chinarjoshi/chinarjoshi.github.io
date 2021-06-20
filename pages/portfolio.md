@@ -13,11 +13,11 @@ header:
   overlay_filter: "0.5"
   
 iotools:
-  - image_path: /assets/images/blur-code.png
+  - image_path: /assets/images/iotools-nb.png
     alt: "IoTools Logo"
     title: "IoTools"
     excerpt: "Intuitive tools for managing internet of things applications"
-    url: "https://chinarjoshi.com/iotools/"
+    url: "https://chinarjoshi.com/IoTools/"
     btn_label: "Product Page"
     btn_class: "btn--primary"
     
