@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A (Modern) Tale Of Two Editors
+permalink: /tale-of-two-editors/
 ---
 In the annals of programmer folklore, few debates have been as fervent, as enduring, or as inconclusive as Vim vs. Emacs. These two text editors have not only carved out distinct philosophies but also nurtured zealous communities. Yet, as time rolls on and technology advances, are Vim and Emacs being left in the dust by more modern editors, or are they evolving to continue their relevance?
 

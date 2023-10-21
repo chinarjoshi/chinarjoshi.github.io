@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adaptive Screen Brightness - A Reinforcement Learning Solution
+permalink: /brilliant/
 ---
 Screen brightness management may seem like a trivial issue, but it significantly impacts user experience in terms of eye strain and battery longevity. Existing solutions like Windows' Adaptive Brightness and macOS' True Tone offer basic capabilities, yet they lack the finesse and adaptability provided by neural networks. On the Linux front, tools like wluma offer not only ambient light-based adjustments but also consider on-screen content. However, they do not account for factors like time of day, leaving room for a more comprehensive solution. This article delves into the technical architecture of a neural network-based approach to screen brightness adjustment on Linux, covering Xorg and Wayland.
 The Need for AI-Enhanced Adaptive Brightness
