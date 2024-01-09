@@ -2,17 +2,23 @@
 layout: default
 title: Home
 ---
+<head>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
 <div class="intro">
   <p>
-  To those who think Linux enthusiasts are eccentric and their software is archaic, I couldn’t agree more. Non-profit work from disparate programmers will never match the polish of Apple products powered by the industry’s best engineers and their 10-gazillion parameter neural networks. However, the fact that Linux servers power the state of the art of AI, yet Linux users don’t see a lick of it, is possibly the worst trade deal of the Unix epoch.
+  To those who think Linux enthusiasts are eccentric and their software is archaic, I couldn’t agree more. Non-profit work from disparate programmers will never match the polish of Apple products powered by the industry’s best engineers and their <a href="https://github.com/hollance/neural-engine">mega-optimized neural networks</a>. However, the fact that Linux servers power the state of the art of AI, yet Linux users don’t see a lick of it, is possibly the worst trade deal of the Unix epoch.
   </p>
   
   <p>
-  I want to change that incrementally by documenting specific problems I face using the Linux desktop, and solving them through modular programs and machine learning solutions. Thus, I want to bridge the gap between <b>Linux enthusiasts</b> and <b>AI enthusiasts</b> two significant yet disparate communities.
+  I want to change that incrementally by documenting specific problems I face using the Linux desktop, and solving them through simple programs and machine learning solutions. Thus, I want to bridge the gap between <b>Linux enthusiasts</b> and <b>AI enthusiasts</b>, two significant yet disparate communities.
   </p>
 </div>
 <br>
+
 
 <div class="posts">
   {% for post in site.posts %}
@@ -37,3 +43,28 @@ title: Home
     </div>
   {% endfor %}
 </div>
+
+<!-- <div class="kanban-board"> -->
+<!--   {% for category in site.categories %} -->
+<!--     <div class="board"> -->
+<!--       <h2>{{ category[0] }}</h2> -->
+<!--       <div class="problem"> -->
+<!--         {% for post in category[1] %} -->
+<!--           {% if post.layout == 'problem' %} -->
+<!--             <a href="{{ post.url }}">{{ post.title }}</a> -->
+<!--           {% endif %} -->
+<!--         {% endfor %} -->
+<!--       </div> -->
+<!--       <hr> -->
+<!--       <div class="solutions"> -->
+<!--         {% for post in category[1] %} -->
+<!--           {% if post.layout == 'solution' %} -->
+<!--             <div class="card"> -->
+<!--               <a href="{{ post.url }}">{{ post.title }}</a> -->
+<!--             </div> -->
+<!--           {% endif %} -->
+<!--         {% endfor %} -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   {% endfor %} -->
+<!-- </div> -->

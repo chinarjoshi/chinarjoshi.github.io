@@ -1,0 +1,7 @@
+---
+layout: post
+title: spaces - associate a tab group with a workspace layout
+permalink: /spaces/
+category: desktop
+type: solution
+---

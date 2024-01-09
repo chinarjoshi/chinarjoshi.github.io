@@ -1,0 +1,7 @@
+---
+layout: post
+title: bones - barebones Linux package set without GNU, X11, nor systemd
+permalink: /bones/
+category: packages
+type: solution
+---

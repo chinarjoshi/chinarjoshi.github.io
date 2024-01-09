@@ -1,0 +1,7 @@
+---
+layout: post
+title: scythe - package manager that cuts through clutter
+permalink: /scythe/
+category: packages
+type: solution
+---

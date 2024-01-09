@@ -1,0 +1,22 @@
+.kanban-board {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+}
+
+.problem {
+  font-weight: bold;
+}
+
+.solutions .card {
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
