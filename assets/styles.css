@@ -1,0 +1,37 @@
+.kanban-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%
+}
+
+.board {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.problem-title {
+  color: #eb2939;
+}
+
+.problem-text {
+  color: black;
+}
+
+.solution-title {
+  color: #256650;
+}
+
+.solution-text {
+  color: black;
+}
+
+.card {
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
