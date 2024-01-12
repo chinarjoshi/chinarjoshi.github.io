@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmers neglect non-programming tasks
+title: Programmers neglect the non-programming stuff
 permalink: /non-programming/
 category: non-programming
 type: problem
