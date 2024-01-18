@@ -5,5 +5,4 @@ permalink: /brilliant/
 category: desktop
 type: solution
 ---
-
-
+Description coming soon...
