@@ -8,7 +8,7 @@ type: solution
 LLMs are non-deterministic by nature, which means our prompts can't be traditionally unit-tested. Instead, assert that the similarity between the model's output and your reference output is above your defined threshold. We first calculate the vector representation of both pieces of data, and then take either the Euclidian distance, cosine, or dot product of the vectors.
 
 ## Why are LLMs non-deterministic in the first place?
-You've probably been explained a thousand times that LLMs "calculate the probability of the next word in a sequence." So given an input sequence, an LLM will output a "score" for all possible words in its vocabulary, called the *logits*. These scores are put through the *softmax* function to generate a probability density function that looks like this:
+You've probably been explained a thousand times that LLMs "calculate the probability of the next word in a sequence." So given an input sequence, an LLM will output a raw "score" for all possible words in its vocabulary, called the *logits*. These scores are put through the *softmax* function to generate a probability density function that looks like this:
 
 
 <img src="/assets/determinist-dist.png" alt="Softmax distribution"/>
