@@ -6,6 +6,8 @@ category: desktop
 type: solution
 ---
 
+Did you know that 30-40% of your laptop battery goes to powering your screen?! If we get even a 20% decrease of the power requirement of the screen, for a standard 10-hour battery charge, you can expect to gain about *40 minutes* of battery life. Since we usually don't look at our screen even 80% of the time, this is a very feasible optimization to achieve. Thus, I attempt to solve this problem by greedily dimming the screen when it's not being utilized, which means no-one is looking at it.
+
 This is a program that takes pictures from the laptop camera and dims the screen if you're looking away for a user-defined amount of time. It uses a gaze estimation model tuned for edge-computing mobile devices, MobileGaze, that is trained on the GazeCapture dataset. Gaze estimation is a regression task that determins the x,y coordinates on the screen that the user is looking at. I present a new model, MobileAttention, that determines whether or not the user is looking at the screen, a simpler classification task.
 The result is a model that is incredibly efficient, both in terms of speed and FLOPs. 
 
