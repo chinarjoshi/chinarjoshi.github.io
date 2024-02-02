@@ -1,6 +1,6 @@
 ---
 layout: post
-title: attention - dims the screen when you're looking away to save battery
+title: attention - extends your battery life by ~1hr by dimming screen when you're facing away
 permalink: /attention/
 category: desktop
 type: solution

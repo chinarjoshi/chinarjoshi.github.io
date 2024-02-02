@@ -1,6 +1,6 @@
 ---
 layout: post
-title: declutter - organizes messy folders into meaningful subfolders
+title: declutter - continuously organizes your Downloads into meaningful subfolders
 permalink: /declutter/
 category: desktop
 type: solution
