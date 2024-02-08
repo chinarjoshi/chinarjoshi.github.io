@@ -1,6 +1,6 @@
 ---
 layout: post
-title: attention - extends your battery life by ~1hr by dimming screen when you're facing away
+title: attention - extend your laptop battery by 1hr by dimming screen when you look away
 permalink: /attention/
 category: desktop
 type: solution
