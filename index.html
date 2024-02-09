@@ -17,6 +17,12 @@ title: Home
 <br>
 
 {% assign categories = 'desktop,packages,non-programming,shells' | split: ',' %}
+
+
+{% for category_name in categories %}
+  {{ category_name }}
+{% endfor %}
+
 <div class="kanban-board">
   {% for category_name in categories %}
     {% assign category = site.categories[category_name] %}
