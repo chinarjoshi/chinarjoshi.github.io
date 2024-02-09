@@ -20,7 +20,7 @@ title: Home
 
 
 {% for category_name in categories %}
-  {{ site.categories[category_name][1] }}
+  {{ site.categories[category_name][1].title }}
 {% endfor %}
 
 <div class="kanban-board">
