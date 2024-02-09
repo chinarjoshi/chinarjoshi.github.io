@@ -16,8 +16,10 @@ title: Home
 </div>
 <br>
 
+{% assign categories = 'desktop,packages,non-programming,shells' | split: ',' %}
 <div class="kanban-board">
-  {% for category in site.categories %}
+  {% for category_name in categories %}
+    {% assign category = site.categories[category_name] %}
     <div class="board">
       <div>
         {% for post in category[1] %}
