@@ -1,6 +1,6 @@
 ---
 layout: post
-title: wpaconnect - automatically connect to eduroam during Linux bootstrapping
+title: Auto-connect to eduroam during Linux bootstrapping
 permalink: /englizsh/
 category: shells
 type: solution
@@ -17,9 +17,9 @@ You need 3 components:
 3. **DNS stub resolver**: This service is responsible for accepting network requests from local applications and forwarding it to the DNS servers specified by the DHCP client. 
 
 Now, the network I'm going to be focusing on, *eduroam*, uses the following 3 protocols:
-*WPA2-Enterprise*: WiFi Protected Access 2 is a network security protocol that requires users to authenticate with a username + password before granting access. It specifies a 2-phase method to get on the same page about the pre-shared key (PSK). 
-*PEAP*: Extensible Authentication Protocol (EAP) is a set of common functions and negotiation mechanisms to select the authentication method between client and server. Protected EAP (PEAP) first establishing a TLS tunnel to ensure the client credentials *(username + password)* are securely sent. This is the first phase.
-*MSCHAPV2*: A "challenge-handshake" authentication protocol commonly used with PEAP. After the server knows the client's password, it sends a random number to the client, called the challenge. The client hashes their password and random number together, and sends the result back to the server. The server compares this with it's own answer, and if they match, the authentication process is finally done. This is the second phase.
+ - **WPA2-Enterprise**: WiFi Protected Access 2 is a network security protocol that requires users to authenticate with a username + password before granting access. It specifies a 2-phase method to get on the same page about the pre-shared key (PSK). 
+ - **PEAP**: Extensible Authentication Protocol (EAP) is a set of common functions and negotiation mechanisms to select the authentication method between client and server. Protected EAP (PEAP) first establishing a TLS tunnel to ensure the client credentials *(username + password)* are securely sent. This is the first phase.
+ - **MSCHAPV2**: A "challenge-handshake" authentication protocol commonly used with PEAP. After the server knows the client's password, it sends a random number to the client, called the challenge. The client hashes their password and random number together, and sends the result back to the server. The server compares this with it's own answer, and if they match, the authentication process is finally done. This is the second phase.
 
 ## Enable the wireless network interface
 
@@ -81,9 +81,10 @@ There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and
 
 There are 2 options: `systemd-resolved` and `resolvconf`. The former is ubiquitous, and the latter is for anti-systemd users. Simply ensure the process is running in the background.
 
----
 
-I also wrote a shell script, called `wpaconnect`, that does exactly these steps. This is useful for distro-hoppers who don't want to waste hours getting the authentication configs right, or if this is your first time installing an "advanced" Linux distro and had the rude awakening that old software is not friendly. You can find more information about it at this GitHub repo.
+# Introducing: `wpaconnect`
+
+I wrote a shell script that does exactly these steps. This is useful for distro-hoppers who don't want to waste hours getting the authentication configs right, or if this is your first time installing an "advanced" Linux distro and had the rude awakening that old software is not friendly. You can find more information about it at this GitHub repo.
 
 ---
 [^1] Unless you really messed up and completely forgot to install any networking software during bootstrap. In this case, you need to go back into the installation environment and bootstrap the appropriate programs.
