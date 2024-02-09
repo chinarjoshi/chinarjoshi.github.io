@@ -82,7 +82,7 @@ There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and
 There are 2 options: `systemd-resolved` and `resolvconf`. The former is ubiquitous, and the latter is for anti-systemd users. Simply ensure the process is running in the background.
 
 
-# Introducing: `wpaconnect`
+## Introducing: `wpaconnect`
 
 I wrote a shell script that does exactly these steps. This is useful for distro-hoppers who don't want to waste hours getting the authentication configs right, or if this is your first time installing an "advanced" Linux distro and had the rude awakening that old software is not friendly. You can find more information about it at this GitHub repo.
 

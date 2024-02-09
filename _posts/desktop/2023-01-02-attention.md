@@ -23,4 +23,4 @@ The pipeline is defined below:
 
 Another important consideration is ongoing learning. Using the feedback from the user to continue to improve the model. A successful dim is defined also by the user with a default of 3s. If the screen is dimmed for 3 seconds, then it was worthwhile. Otherwise, the model should not have dimmed the screen.
 
-## Introducing `attention`
+## Introducing: `attention`

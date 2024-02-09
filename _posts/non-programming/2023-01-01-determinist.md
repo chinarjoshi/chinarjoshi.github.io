@@ -60,7 +60,7 @@ But alas, I am still writing, meaning my nitpicky brain has found something to c
 1. It does not fit into existing Python testing infrastructures at all. It includes a library function `evaluate` to integrate into your code, but only for JavaScript. <small>yucky</small>.
 2. It involves learning a new complex system that may be too feature-complete for your needs. Indeed, it creates its own ecosystem to solve this testing problem.
 
-# Introducing: `determinist`
+## Introducing: `determinist`
 
 * It's dead simple. It's a single Python file consisting of a handful of functions, and ships with a very small embedding model ready to use.
 * Fits seamlessly within `pytest` and `unittest`. All you have to do is pass in your acceptance threshold, and iterate on it a few times until you deem it acceptable. No additional learning is required.
