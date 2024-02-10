@@ -28,7 +28,7 @@ title: Home
     {% assign category = site.categories[category_name] %}
     <div class="board">
       <div>
-        {% for post in category[1] %}
+        {% for post in category %}
           {% if post.type == 'problem' %}
             <h2>
               <a class="problem-title" href="{{ post.url }}">
@@ -46,7 +46,7 @@ title: Home
       <hr>
 
       <div class="card">
-        {% for post in category[1] %}
+        {% for post in category %}
           {% if post.type == 'solution' %}
             <div>
               <h3>
