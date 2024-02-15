@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Search everything you've seen, said, or heard
+title: A personal assistant that knows everything you've seen, said, and heard
 permalink: /continuity/
 category: desktop
 type: solution
