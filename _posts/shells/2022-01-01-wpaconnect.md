@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Auto-connect to eduroam during Linux bootstrapping
+title: Autoconnect to eduroam during Linux bootstrapping
 permalink: /englizsh/
 category: shells
 type: solution
@@ -83,6 +83,8 @@ There are 2 options: `systemd-resolved` and `resolvconf`. The former is ubiquito
 
 
 ## Introducing: `wpaconnect`
+
+Underutilized feature: shell script to automate setup
 
 I wrote a shell script that does exactly these steps. This is useful for distro-hoppers who don't want to waste hours getting the authentication configs right, or if this is your first time installing an "advanced" Linux distro and had the rude awakening that old software is not friendly. You can find more information about it at this GitHub repo.
 

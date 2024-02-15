@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Extend your laptop battery by 1hr by dimming screen when you look away
+title: Dim the screen when you look away to extend laptop battery by 1hr
 permalink: /attention/
 category: desktop
 type: solution
@@ -22,5 +22,7 @@ The pipeline is defined below:
  The added complexity comes from batch operations into the network: A picture can be taken twice a second, and only processed every 5 seconds. If at any point in the sequence the user is looking away, then you can more accurately respect the timer defined by the user.
 
 Another important consideration is ongoing learning. Using the feedback from the user to continue to improve the model. A successful dim is defined also by the user with a default of 3s. If the screen is dimmed for 3 seconds, then it was worthwhile. Otherwise, the model should not have dimmed the screen.
+
+Underutilized feature: head pose estimators
 
 ## Introducing: `attention`
