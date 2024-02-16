@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dim the screen when you look away to extend laptop battery by 1hr
+title: Extend your laptop battery by 1hr by dimming the screen when you look away
 permalink: /attention/
 category: desktop
 type: solution

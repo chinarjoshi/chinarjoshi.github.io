@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A personal assistant that knows everything you've seen, said, and heard
+title: Enable Jarvis-like assistants by capturing everything you've seen, said, and heard
 permalink: /continuity/
 category: desktop
 type: solution
@@ -10,6 +10,8 @@ I forget things too quickly after they happen. I wish I lived in that episode of
 This problem falls into the space of personal data capture and management. Most tools feel like copycats of each other, but one recently stood out to me: *Rewind.ai*. It's a background app that captures and labels on-screen text and microphone input. Since practically everything we learn is now through our laptops, it captures everything. This is a functional, efficient implementation of a second brain! 
 Small problem though, *it's extremely proprietary and only runs on Apple devices*. It only runs efficiently because Apple devices have efficient neural network processors and fast, developer-friendly AI libraries, and it's proprietary so it can charge you $20 a month.
 This is actually not a big problem, because Rewind.ai doesn't do anything special that we can't do ourselves. Creating an open-source pipeline out of a language model, text-from-image model, and voice-to-text model, along with a native data capture program will give us the exact same thing, except we know exactly what's happening to our data!
+
+There are a million "personal assistant" programs that use RAG to create a coherent user interface. What I want is to augment the backend knowledge base as *efficiently* as possible
 
 
 ## Introducing: `continuity`
