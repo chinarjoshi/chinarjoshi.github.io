@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Enable Jarvis-like assistants by capturing everything you've seen, said, and heard
+title: Enable Jarvis-like assistants by capturing your life in real-time
 permalink: /continuity/
 category: desktop
 type: solution
