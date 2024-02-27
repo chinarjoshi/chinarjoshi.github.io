@@ -5,6 +5,8 @@ permalink: /continuity/
 category: desktop
 type: solution
 ---
+The road to creating [Jarvis](https://ironman.fandom.com/wiki/J.A.R.V.I.S.) is fraught with scary technical, ethical, and legal problems. Such is the nature of a super-assistant that knows everything you know 
+
 I forget things too quickly after they happen. I wish I lived in that episode of "Black Mirror" where a brain chip records your audiovisual senses and lets you rewatch your memories. But alas, the ubiquitous solution is to note-take the things you learn, which is fundamentally an *O(n)*, manual operation. I need an O(1) solution to this note-taking problem, a second brain if you will.
 
 This problem falls into the space of personal data capture and management. Most tools feel like copycats of each other, but one recently stood out to me: *Rewind.ai*. It's a background app that captures and labels on-screen text and microphone input. Since practically everything we learn is now through our laptops, it captures everything. This is a functional, efficient implementation of a second brain! 

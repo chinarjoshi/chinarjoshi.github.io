@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Autoconnect to eduroam during Linux bootstrapping
-permalink: /englizsh/
+permalink: /wpaconnect/
 category: shells
 type: solution
 ---
@@ -19,7 +19,7 @@ You need 3 components:
 Now, the network I'm going to be focusing on, *eduroam*, uses the following 3 protocols:
  - **WPA2-Enterprise**: WiFi Protected Access 2 is a network security protocol that requires users to authenticate with a username + password before granting access. It specifies a 2-phase method to get on the same page about the pre-shared key (PSK). 
  - **PEAP**: Extensible Authentication Protocol (EAP) is a set of common functions and negotiation mechanisms to select the authentication method between client and server. Protected EAP (PEAP) first establishing a TLS tunnel to ensure the client credentials *(username + password)* are securely sent. This is the first phase.
- - **MSCHAPV2**: A "challenge-handshake" authentication protocol commonly used with PEAP. After the server knows the client's password, it sends a random number to the client, called the challenge. The client hashes their password and random number together, and sends the result back to the server. The server compares this with it's own answer, and if they match, the authentication process is finally done. This is the second phase.
+ - **MSCHAPV2**: A "challenge-handshake" authentication protocol commonly used with PEAP. After the server receives the client's password, it sends a random number to the client, called the challenge. The client hashes their password and random number together, and sends the result back to the server. The server compares this with it's own answer, and if they match, the authentication process is finally done. This is the second phase.
 
 ## Enable the wireless network interface
 
@@ -71,22 +71,26 @@ AutoConnect=true
 
 Because of the autoconnect variable, iwd should immedietely connect. If not, then use the command `iwctl station {network interface} connect eduroam`.
 
-Luckily, Georgia Tech does not require a client-side CA certificate. If your institution does, then you will sadly need to scour the internet or Reddit. 
+### CA Certificates
+
+Establishing trust on the internet is an insurmountable problem because there is always some surface to attack. But we are ok blindly trusting a few organizations that vouch for the authenticity of other entities on the internet. These organizations are called *certificate authorities (CA)*, and they establish trustworthiness on important networks through digital documents that include the CA's public key, the server's domain name, and more importantly, the CA's signature, aka *CA certificates*. On networks where authenticity is majorly important like an academic institution, clients are often required to have the certificate to connect <small><i>(but this is up to the network to decide)</i></small>. When you try to connect to a secure network, it will present its certificate to the client. This certificate cannot be altered or spoofed without changing the signature, meaning the domain name is authentic. The client will double check the signature to make sure the network is who they say they are.
+
+Your OS includes a plethora of trusted CA certificates, but academic institutions often use their own CA. If you don't have their certificate, then you have to search their IT page to download it from another computer, put it on a flash drive, transfer it onto your bootstrapping computer, and let `wpa_supplicant` or `iwd` know about it. Luckily, Georgia Tech does not require a client-side CA certificate, so we can move on to the next step.
 
 ## Get an IP address
 
-There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and `dhcpcd`. The first 3 are bigger network managers that also provide a built in DHCP cilent, and the last 2 are standalone clients. For the network managers, you will need to make a profile for the network before connecting. For `dhcpcd`, simply run it on your network interface with `dhcpcd -i {interface}`. I believe `iwd` is the best option because it provides authentication and DHCP in one package, while being more efficiently written than the other options, which is good news for battery life.
+There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and `dhcpcd`. The first 3 are bigger network managers that also provide a built in DHCP cilent, and the last 2 are standalone clients. For the network managers, you will need to make a profile for the network before connecting. For `dhcpcd`, simply run it on your network interface with `dhcpcd -i {interface}`. I believe `iwd` is the best option because it provides authentication and DHCP in one package, while being more efficiently written than the other options through kernel feature utilization, which is good news for battery life. Whatever choice you make, just start it in the background with `systemctl enable --now`.
 
 ## Get domain name resolution
 
-There are 2 options: `systemd-resolved` and `resolvconf`. The former is ubiquitous, and the latter is for anti-systemd users. Simply ensure the process is running in the background.
+There are only 2 options: `systemd-resolved` and `resolvconf`. The former is ubiquitous, and the latter is for anti-systemd users. All you have to do is ensure the process is running in the background, with `systemctl enable --now` or `resolvconf &`.
 
 
 ## Introducing: `wpaconnect`
 
 Underutilized feature: shell script to automate setup
 
-I wrote a shell script that does exactly these steps. This is useful for distro-hoppers who don't want to waste hours getting the authentication configs right, or if this is your first time installing an "advanced" Linux distro and had the rude awakening that old software is not friendly. You can find more information about it at this GitHub repo.
+I wrote a shell script that does exactly these steps. This is useful for distro-hoppers who don't want to waste hours getting the authentication configs right, or if this is your first time installing an "advanced" Linux distro and had the rude awakening that old software is not friendly. You can find usage information at the GitHub repo.
 
 ---
 [^1] Unless you really messed up and completely forgot to install any networking software during bootstrap. In this case, you need to go back into the installation environment and bootstrap the appropriate programs.

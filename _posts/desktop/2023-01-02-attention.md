@@ -1,10 +1,14 @@
 ---
 layout: post
-title: Extend your laptop battery by 1hr by dimming the screen when you look away
+title: Extend your laptop battery up to 1hr by dimming the screen when you look away
 permalink: /attention/
 category: desktop
 type: solution
 ---
+
+How often do you look at your phone or talk to your friend while your laptop is open? That's battery down the drain, meaning you'll have to charge it more often. However, putting it to sleep often is a big inconvenience because it takes time to turn on and to reconnect to WiFi. The solution is simpler: dim the screen when you're not using it.
+
+The biggest culprit of battery consumption is by far your screen at a whopping 30-40%
 
 Did you know that 30-40% of your laptop battery goes to powering your screen?! If we get even a 20% decrease of the power requirement of the screen, for a standard 10-hour battery charge, you can expect to gain about *40 minutes* of battery life. Since we usually don't look at our screen even 80% of the time, this is a very feasible optimization to achieve. Thus, I attempt to solve this problem by greedily dimming the screen when it's not being utilized, which means no-one is looking at it.
 
