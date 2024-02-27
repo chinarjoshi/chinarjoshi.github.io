@@ -86,9 +86,9 @@ Your OS includes a plethora of trusted CA certificates, but academic institution
 
 ## 4. Get an IP address
 
-There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and `dhcpcd`. The first 3 are bigger network managers that also bundle a DHCP cilent, and the last 2 are standalone clients. For the network managers, you will need to make a profile for the network before connecting. For `dhcpcd`, simply run it on your network interface with `dhcpcd -i {interface}`. I believe `iwd` is the best option because it provides authentication and DHCP in one package, while being more efficiently written than the other options through kernel feature utilization, which is good news for battery life. Whatever choice you make, just start it in the background with `systemctl enable --now`.
+There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and `dhcpcd`. The first 3 are bigger network managers that also bundle a DHCP cilent, and the last 2 are standalone clients. For the network managers, you will need to make a profile for the network before connecting. For `dhcpcd`, simply run it on your network interface with `dhcpcd -i {interface}`. I believe `iwd` is the best option because it provides authentication and DHCP in one package, while being more efficiently written than the other options through kernel feature utilization, which is good news for battery life. Whatever choice you make, just start it in the background with `systemctl enable --now`, and use the provided CLI to select your network ssid if it didn't autoconnect.
 
-## Get domain name resolution
+## 5. Get domain name resolution
 
 There are only 2 options for a DNS stub resolver: `systemd-resolved` and `resolvconf`. The former is ubiquitous, and the latter is for anti-systemd users. There is really no setup: all you have to do is ensure the process is running in the background, with `systemctl enable --now` or `resolvconf &`.
 
