@@ -22,7 +22,7 @@ Installation boot images come with barebones programs to save disk space. To mak
 You need to choose 3 components:
 1. **Authenticator**: This program is responsible for providing credentials to a secure network. It configures the connection type (WPA2-Enterprise), and establishes network access through many protocols. There are only 2 such programs in Linux-realm: *wpa_supplicant* (old), and *iwd* (new). Network managers will use one of these two programs under the hood, and there will always be one installed. 
 2. **DHCP client**: This client is responsible for implementing the client side of *dynamic host configuration protocol*, which is how you get assigned an IP address, reccognize the default gateway, and identify DNS servers. 
-3. **Domain name resolution**: This service is responsible for accepting network requests from local applications and forwarding it to the DNS servers specified by the DHCP client. 
+3. **Domain name resolver**: This service is responsible for accepting network requests from local applications and forwarding it to the DNS servers specified by the DHCP client. 
 
 ### Enable the wireless network interface
 
@@ -76,17 +76,17 @@ Because of the autoconnect variable, iwd should immedietely connect. If not, the
 
 ### CA Certificates
 
-Establishing trust on the internet is an insurmountable problem because there is always some surface to attack. But we are ok blindly trusting a few organizations that vouch for the authenticity of other entities on the internet. These organizations are called *certificate authorities (CA)*, and they establish trustworthiness on important networks through digital documents that include the CA's public key, the server's domain name, and more importantly, the CA's signature, aka *CA certificates*. On networks where authenticity is majorly important like an academic institution, clients are often required to have the certificate to connect <small><i>(but this is up to the network to decide)</i></small>. When you try to connect to a secure network, it will present its certificate to the client. This certificate cannot be altered or spoofed without changing the signature, meaning the domain name is authentic. The client will double check the signature to make sure the network is who they say they are.
+Establishing trust on the internet is an insurmountable problem because there is always some surface to attack. But we are ok blindly trusting a few organizations that vouch for the authenticity of other entities on the internet. These organizations are called *certificate authorities (CA)*, and they establish trustworthiness on important networks through digital documents that include the CA's public key, the server's domain name, and most importantly, are encrypted with the CA's private key. These are called *CA certificates*. On networks where authenticity is majorly important like an academic institution, clients are often required to have the certificate to connect <small><i>(but this is up to the network to decide)</i></small>. When you try to connect to a secure network, the server will present its certificate to the client. This certificate cannot be altered or spoofed without changing the signature, meaning the domain name is authentic. The client will double check the signature to make sure the network is who they say they are.
 
 Your OS includes a plethora of trusted CA certificates, but academic institutions often use their own CA. If you don't have their certificate, then you have to search their IT page to download it from another computer, put it on a flash drive, transfer it onto your bootstrapping computer, and let `wpa_supplicant` or `iwd` know about it. Luckily, Georgia Tech does not require a client-side CA certificate, so we can move on to the next step.
 
-![Amazon's CA certificate](/assets/wpa-certificate.png)
-<div style="text-align: center;"><small>(Amazon's CA certificate in /etc/ssl/certs/)</small></div>
+![Amazon CA certificate 4](/assets/wpa-certificate.png)
+<div style="text-align: center;"><small>(An Amazon CA certificate in /etc/ssl/certs/)</small></div>
 
 
 ## 4. Get an IP address
 
-There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and `dhcpcd`. The first 3 are bigger network managers that also provide a built in DHCP cilent, and the last 2 are standalone clients. For the network managers, you will need to make a profile for the network before connecting. For `dhcpcd`, simply run it on your network interface with `dhcpcd -i {interface}`. I believe `iwd` is the best option because it provides authentication and DHCP in one package, while being more efficiently written than the other options through kernel feature utilization, which is good news for battery life. Whatever choice you make, just start it in the background with `systemctl enable --now`.
+There are 5 options: `NetworkManager`, `ConnMan`, `iwd`, `systemd-networkd`, and `dhcpcd`. The first 3 are bigger network managers that also bundle a DHCP cilent, and the last 2 are standalone clients. For the network managers, you will need to make a profile for the network before connecting. For `dhcpcd`, simply run it on your network interface with `dhcpcd -i {interface}`. I believe `iwd` is the best option because it provides authentication and DHCP in one package, while being more efficiently written than the other options through kernel feature utilization, which is good news for battery life. Whatever choice you make, just start it in the background with `systemctl enable --now`.
 
 ## Get domain name resolution
 
