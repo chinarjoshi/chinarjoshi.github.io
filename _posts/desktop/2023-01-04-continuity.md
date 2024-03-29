@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Enable Jarvis-like assistants by capturing your life in real-time
+title: Enable the perfect virtual assistant by capturing your life in real-time
+subtitle: Designing an effective dataset with OS principles
 permalink: /continuity/
 category: desktop
 type: solution

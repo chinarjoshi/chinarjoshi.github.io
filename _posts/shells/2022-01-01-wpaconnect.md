@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Autoconnect to eduroam during Linux bootstrapping
+subtitle: Understanding the Linux networking stack
 permalink: /wpaconnect/
 category: shells
 type: solution

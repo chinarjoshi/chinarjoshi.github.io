@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Extend your laptop battery up to 1hr by dimming the screen when you look away
+title: Save an hour of battery by dimming the screen when you look away
+subtitle: Optimizing local vision through compression and sleep
 permalink: /attention/
 category: desktop
 type: solution

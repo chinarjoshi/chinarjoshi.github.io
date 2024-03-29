@@ -1,7 +1,7 @@
 # Setup
 remote_theme:        poole/lanyon
 title:               NeuraLinux
-tagline:             'Bringing genAI to the Linux desktop'
+tagline:             'Bringing GenAI to the Linux desktop'
 description:         Linux servers have powered the AI revolution. It's time to reap the intelligence and use it on the desktop.
 url:                 https://chinarjoshi.github.io
 baseurl:             ''
