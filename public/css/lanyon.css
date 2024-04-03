@@ -99,6 +99,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
 }
+.masthead-image {
+    display: inline-block;
+    vertical-align: middle; /* Adjusts vertical alignment */
+    margin: 0;
+    width: 3em;  /* As calculated previously */
+    height: auto;
+}
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -112,6 +119,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   color: #c0c0c0;
   letter-spacing: 0;
+}
+.masthead-title, .masthead-title small {
+    display: inline-block;
+    vertical-align: middle; /* Aligns text with the image */
 }
 
 @media (max-width: 48em) {
