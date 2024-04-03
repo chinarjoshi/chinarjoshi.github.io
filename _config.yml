@@ -5,7 +5,7 @@ tagline:             'Bringing GenAI to the Linux desktop'
 description:         Linux servers have powered the AI revolution. It's time to reap the intelligence and use it on the desktop.
 url:                 https://chinarjoshi.github.io
 baseurl:             ''
-paginate:            5
+# paginate:            5
 permalink:           pretty
 
 # About/contact
@@ -16,7 +16,7 @@ author:
 
 # Gems
 plugins:
-  - jekyll-paginate
+  # - jekyll-paginate
   - jekyll-remote-theme
 
 # Custom vars
