@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 <head>
-  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/public/css/styles.css' | relative_url }}">
   <link rel="icon" sizes="16x16" type="image/png" href="assets/favicon/favicon-16x16.png">
   <link rel="icon" sizes="32x32" type="image/png" href="assets/favicon/favicon-32x32.png">
 </head>
@@ -31,15 +31,10 @@ title: Home
       <div>
         {% for post in category %}
           {% if post.type == 'problem' %}
-            <h2>
-              <a class="problem-title" href="{{ post.url }}">
-                {{ post.title }}
-              </a>
-            </h2>
+            <h2> <a class="problem-title" href="{{ post.url }}"> {{ post.title }} </a> </h2>
 
             <small class="problem-text">
               {{ post.excerpt | strip_html | truncatewords: 100 }}
-              <a href="{{ post.url | absolute_url }}">Read more →</a>
             </small>
           {% endif %}
         {% endfor %}
@@ -50,15 +45,12 @@ title: Home
         {% for post in category %}
           {% if post.type == 'solution' %}
             <div>
-              <h3>
-                <a class="solution-title" href="{{ post.url }}">
-                  {{ post.title }}
-                </a>
-              </h3>
-
+              <h3><a class="solution-title" href="{{ post.url }}"> {{ post.title }} </a></h3>
+              <small>Plus,</small> <span class="solution-subtitle"> {{ post.subtitle }} </span>
+              <br>
+                
               <small class="solution-text">
-              {{ post.excerpt | strip_html | truncatewords: 30 }}
-              <a href="{{ post.url | absolute_url }}">Read more →</a>
+              {{ post.excerpt | strip_html | truncatewords: 50 }}
               </small>
             </div>
           {% endif %}

@@ -21,7 +21,12 @@
 }
 
 .solution-title {
-  color: #256650;
+  color: #2b7a5f;
+}
+
+.solution-subtitle {
+  font-size: 1em;
+  color: #1f5744;
 }
 
 .solution-text {
