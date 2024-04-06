@@ -69,18 +69,18 @@ Luckily, there isn’t any unique functionality that we can’t replicate oursel
 
 
 Here is a detailed overview of the components this data collection backend needs:
-* Screen contents capture (scrot): Take a screenshot at a constant interval, say every other second. This is a very low overhead operation and should happen continuously.
-   * Video encoding (ffmpeg): Encode a sufficiently long folder of screenshots into a highly compressed H.265 video. This is a costly operation that should be deferred until the user is charging their laptop.
-   * OCR (tesseract): Extract the text from each screenshot and store it in the database with a timestamp. This too is a costly operation that should be deferred.
-* Audio capture (ALSA): Record some short interval of audio using the arecord tool from ALSA. Sleep for long durations between every recording interval to minimize battery strain.
-   * Conversation recognition (whisper): Extract any voices from the short audio interval, and if any are found, record the duration of the conversation. This can be done efficiently with OpenAI’s whisper voice recognition model.
-* Email scraper (IMAP): Scrape recent emails using imaplib in a Python script that is activated at regular but infrequent intervals through a cron job. Another low overhead operation. 
-* Browser history scraper (sqlite3): Scrape browser history from Chrome’s sqlite history database. Low overhead and activated at same time as emails.
+* Screen contents capture (*scrot*): Take a screenshot at a constant interval, say every other second. This is a very low overhead operation and should happen continuously.
+   * Video encoding (*ffmpeg*): Encode a sufficiently large folder of screenshots into a highly compressed H.265 video. This is a costly operation that should be deferred until the user is charging their laptop.
+   * OCR (*tesseract*): Extract the text from each screenshot and store it in the database with a timestamp. This too is a costly operation that should be deferred.
+* Audio capture (*ALSA*): Record some short interval of audio using the arecord tool from ALSA. Sleep for long durations between every recording interval to minimize battery strain.
+   * Conversation recognition (*whisper*): Extract any voices from the short audio interval, and if any are found, record the duration of the conversation. This can be done efficiently with OpenAI’s whisper voice recognition model.
+* Email scraper (*IMAP*): Scrape recent emails using imaplib in a Python script that is activated at regular but infrequent intervals through a cron job. Another low overhead operation. 
+* Browser history scraper (*sqlite3*): Scrape browser history from Chrome’s sqlite history database. Low overhead and activated at same time as emails.
 
 
 As for the contextualizing data, obtaining the timestamp is trivial through the time command or any standard library.
-* Device usage patterns (uptime): Usage patterns are tricky to define, and some ideas are identifying what applications you’ve used and for how long, what ratio of active user input to idle time, or whether the user is typing or using the mouse more. But for this prototype, let’s start by using system uptime as a proxy for how in the “zone” you are. This can be easily found by reading /proc/uptime.
-* GPS location (MLS): Record the user’s current location at regular intervals. We can use the exact same method your phone uses to get your location, which is WiFi-based geolocation. Phone’s don’t actually have GPS hardware, so they guesstimate using what WiFi networks you’re near and with what strength. We can collect the network’s data using NetworkManager’s cli, and then use the free Mozilla Location Services API to get a GPS location.
+* Device usage patterns (*uptime*): Usage patterns are tricky to define, and some ideas are identifying what applications you’ve used and for how long, what ratio of active user input to idle time, or whether the user is typing or using the mouse more. But for this prototype, let’s start by using system uptime as a proxy for how in the “zone” you are. This can be easily found by reading /proc/uptime.
+* GPS location (*MLS*): Record the user’s current location at regular intervals. We can use the exact same method your phone uses to get your location, which is WiFi-based geolocation. Phone’s don’t actually have GPS hardware, so they guesstimate using what WiFi networks you’re near and with what strength. We can collect the network’s data using NetworkManager’s cli, and then use the free Mozilla Location Services API to get a GPS location.
 
 
 ## How will we store and secure the data?
