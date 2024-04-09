@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Music writing software should be accessible by novices
-permalink: /music/
-category: music
+title: Music arrangement comes natural to everyone, but it's gated behind theory and software
+permalink: /arrangement/
+category: arrangement
 type: problem
 ---
 
