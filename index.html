@@ -29,7 +29,9 @@ title: Home
       <div>
         {% for post in category %}
           {% if post.type == 'problem' %}
-            <h2> <a class="problem-title" href="{{ post.url }}"> {{ post.title }} </a> </h2>
+            <h2 class="problem-title">
+              <a href="{{ post.url }}"> {{ post.title }} </a>
+            </h2>
 
             <small class="problem-text">
               {{ post.excerpt | strip_html | truncatewords: 100 }}
@@ -43,7 +45,9 @@ title: Home
         {% for post in category %}
           {% if post.type == 'solution' %}
             <div>
-              <h3><a class="solution-title" href="{{ post.url }}"> {{ post.title }} </a></h3>
+              <h3 class="solution-title">
+                <a href="{{ post.url }}"> {{ post.title }} </a>
+              </h3>
               <small>Plus,</small> <span class="solution-subtitle"> {{ post.subtitle }} </span>
               <br>
                 

@@ -13,6 +13,10 @@
 }
 
 .problem-title {
+  margin-top: 10px;
+}
+
+.problem-title a {
   color: #eb2939;
 }
 
@@ -21,6 +25,11 @@
 }
 
 .solution-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.solution-title a {
   color: #2b7a5f;
 }
 
@@ -39,4 +48,8 @@
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 10px;
+}
+
+.board > div > div:not(:last-child) {
+    margin-bottom: 30px;
 }
