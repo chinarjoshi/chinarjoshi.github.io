@@ -9,6 +9,7 @@
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -25,7 +26,7 @@
 }
 
 .solution-title {
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 
@@ -48,8 +49,11 @@
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 10px;
+  padding-bottom: 15px;
 }
 
 .board > div > div:not(:last-child) {
-    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc; /* Change the color and thickness as needed */
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }

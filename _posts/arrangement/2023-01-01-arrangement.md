@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Music arrangement comes natural to everyone, but it's gated behind theory and software
+title: Music arrangement is gated behind theory and software
 permalink: /arrangement/
 category: arrangement
 type: problem
