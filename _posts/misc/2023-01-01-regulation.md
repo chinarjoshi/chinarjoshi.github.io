@@ -2,7 +2,7 @@
 layout: post
 title: You can dull, but never declaw GenAI due to Moore’s law
 permalink: /regulation/
-category: regulation
+category: misc
 type: problem
 ---
 
