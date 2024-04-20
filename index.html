@@ -13,14 +13,12 @@ title: Home
   <p>
   This blog is the culmination of my first two years of college, written because I'm bored of the traditional way humans use computers, and I see a clear path to making it seamless. It is a living document of my discoveries and insights across a wide breadth of computer science diciplines to give my thoughts a rhetoric home, written such that curiosity is the only prerequisite to comprehension. I hope reading it provides you with fresh perspective on problems, or recreates an "aha!" moment I had. If you disagree with something I said or find a project that piques your interest, please consider <a href="mailto:chinarjoshi7@gmail.com">reaching out</a> and contributing!
   </p>
-
-  <p><small>
-  <i>Note</i>: Most of my programs require an LLM. I reccomend locally hosting an LLM server with an OpenAI-compatible API to avoid <a href=https://openai.com/pricing>paying</a>. A convenient GPU-utilizing option is <a href=https://github.com/ollama/ollama>Ollama</a>, for which my programs will use its REST API.
-  </small></p>
+  <p>
+    Note: <b>This site is under construction.</b> The content that you see is incomplete and will change at any time.
 </div>
 <br>
 
-{% assign categories = 'regulation,desktop,packages,non-programming,shells,arrangement' | split: ',' %}
+{% assign categories = 'desktop,packages,non-programming,shells' | split: ',' %}
 
 <div class="kanban-board">
   {% for category_name in categories %}
@@ -60,4 +58,21 @@ title: Home
       </div>
     </div>
   {% endfor %}
+
+  {% assign misc = site.categories['misc'] %}
+  {% for post in misc %}
+    <div class="board">
+    {% if post.type == 'solution' %}
+        <h3 class="solution-title">
+    {% else %}
+        <h3 class="problem-title">
+    {% endif %}
+          <a href="{{ post.url }}"> {{ post.title }} </a>
+        </h3>
+        <small class="solution-text">
+        {{ post.excerpt | strip_html | truncatewords: 50 }}
+        </small>
+      </div>
+  {% endfor %}
+  
 </div>
