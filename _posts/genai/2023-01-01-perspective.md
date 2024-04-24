@@ -1,10 +1,12 @@
 ---
 layout: post
-title: A music arrangement transformer for any song, any instrumentation
-permalink: /scribe/
-category: misc
+title: Identity digital biases and misinformation by augmenting your news with context
+subtitle: The engineer's guide to fallibilism and pragmatism
+permalink: /perspective/
+category: genai
 type: solution
 ---
+scaling and selection
 Scribe is a transformer that takes a segment of a song on YouTube and generates sheet music for any desired instrumentation.
 The model is trained on YouTube song - MuseScore sheet music pairs. The syncronization is achieved using techniques from ___ paper.
 Music arrangement is gated behind complex theory and software
