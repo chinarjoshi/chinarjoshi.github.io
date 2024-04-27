@@ -3,7 +3,7 @@ layout: post
 title: Identity digital biases and misinformation by augmenting your news with context
 subtitle: The engineer's guide to fallibilism and pragmatism
 permalink: /perspective/
-category: genai
+category: regulation
 type: solution
 ---
 scaling and selection
