@@ -15,3 +15,9 @@ Transcribing my favorite songs for trombone is a daunting task. I don't have the
 music with proper music writing software, like MuseScore.
 
 I want to be able to take any song and just have sheet music ready for any instrumentation (in my case, a trombone choir). Writing the sheet music takes a lot of music theory that I want to learn eventually but don't have the time to do now. I would rather enjoy playing my instrument instead of learning how to use another monolithic software to enable me to do so.
+
+
+Fallibilism asserts that all beliefs are subject to doubt and should be continually tested against new evidence. In the context of digital news:
+
+    Contextual Skepticism: Encourage readers to adopt a fallibilist approach by questioning the certainty of the information presented in news articles. Highlight the importance of seeking out context and corroborating evidence to assess the reliability of news.
+    Continuous Revision: Discuss how ongoing events and stories often evolve, and initial reports might be revised or corrected as new information emerges. This underscores the fallibilist notion that our understanding is always provisional.
