@@ -111,7 +111,7 @@ Taking the derivative of a neural network is a fascinating and strangely intuiti
 
 <img src="/assets/regulation/backprop.png" alt="Backpropagation computational graph"/>
 
-**Figure 8**. Input processing feeds forward, therefore contribution of error propagates backward due to the chain rule of Calculus.
+**Figure 9**. Input processing feeds forward, therefore contribution of error propagates backward due to the chain rule of Calculus.
 
 ## Finally, generative AI
 
@@ -123,7 +123,7 @@ It’s time for the paradigm shift I mentioned at the start of the article, from
 
 <img src="/assets/regulation/marginal.png" alt="The marginal expressed as a sequence"/>
 
-**Figure 8**. The marginal likelihood can be decomposed into a sequence of auto-regressive conditional probabilities.
+**Figure 10**. The marginal likelihood can be decomposed into a sequence of auto-regressive conditional probabilities.
 
 ## Morals of the story
 
