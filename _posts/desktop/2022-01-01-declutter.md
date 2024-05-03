@@ -8,6 +8,8 @@ type: solution
 ---
 Let’s face it: your Downloads folder is a mess, and you’re ashamed of it. But it’s not your fault. Despite the advancements in desktop automation, filesystem organization remains a manual chore—an outdated software convention that hasn't kept pace with modern needs. Imagine the Downloads folder as the inbox of your file system, a space you likely interact with more frequently than your email. Yet, unlike email, which offers various tools to manage the influx, the Downloads folder demands that you suffer the consequences of its clutter each time you access it, whether it's the mental overhead or the sluggish response of your file explorer.
 
+## **DISCLAIMER:** Most of this rough draft was written by GPT-4 given my ideas. As such, the content is incomplete and factually ungrounded. Please check back in 2 weeks for the full version now that I have free time.
+
 The ideal Downloads folder would seamlessly manage incoming files, automatically moving them to appropriate destinations, unpacking archives while eliminating unnecessary folder nesting, and archiving long-term or seldom-used files. It would accomplish this with minimal input from you, requiring only the download URL and a basic understanding of your filesystem layout. This functionality would transcend the fundamentally cumbersome drag-and-drop interface.
 
 Surprisingly, leveraging Large Language Models (LLMs) for this task is not only feasible but potent. LLMs excel at understanding both user intent and the intricate relationships between file paths, thus they can intelligently organize your digital chaos. Picture a world where files like “Final resume (1) (1) (2).pdf” or “Screenshot 2024-01-15 162912.png” are automatically categorized and renamed without your intervention.
