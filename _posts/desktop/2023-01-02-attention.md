@@ -7,13 +7,21 @@ category: desktop
 type: solution
 ---
 
-How often do you look at your phone or talk to your friend while your laptop is open? That's battery down the drain, meaning you'll have to charge it more often. However, putting it to sleep often is a big inconvenience because it takes time to turn on and to reconnect to WiFi. The solution is simpler: dim the screen when you're not using it.
+Did you know your screen uses 30-40% of your total battery!? As an owner of the world’s hottest flat brick, we gotta do something about that. Lucky for us OLED-XPS owners, there’s quite a lot of low hanging fruit when it comes to battery optimization. And I’m focused on one axis in particular: attention and screen-brightness. No, I'm not talking about transformer sequence processing. I’m talking about good old-fashioned eye contact and listening. Think of how many people you see have their laptop open in front of them, but scroll through TikTok on their phone, or have a conversation with their friend, or even just go up to use the bathroom without closing their screen. My plan is to use a vision model in the background to detect user attention to their computer, and set brightness dynamically. But as a program with the objective to reduce battery consumption, it needs to be light enough to not push this into the opposite direction. “Local vision” and “background daemon” are not phrases typically associated with light overhead. So I’ll show both machine learning tricks like quantization and kernel tricks like blocking syscalls to maximize the tradeoff space.
 
-The biggest culprit of battery consumption is by far your screen at a whopping 30-40%
+Model Selection and Optimization:
 
-Did you know that 30-40% of your laptop battery goes to powering your screen?! If we get even a 20% decrease of the power requirement of the screen, for a standard 10-hour battery charge, you can expect to gain about *40 minutes* of battery life. Since we usually don't look at our screen even 80% of the time, this is a very feasible optimization to achieve. Thus, I attempt to solve this problem by greedily dimming the screen when it's not being utilized, which means no-one is looking at it.
+We start by employing a lightweight binary classification model designed to ascertain one thing: Is the user looking at the screen? This reduces the complexity found in multi-class gaze tracking and engagement measurement, drastically cutting down the computational cost.To further enhance efficiency, we employ model quantization techniques, reducing the precision of the numerical calculations from floating point to integers, which accelerates computation speeds and lowers power consumption.
 
-This is a program that takes pictures from the laptop camera and dims the screen if you're looking away for a user-defined amount of time. It uses a gaze estimation model tuned for edge-computing mobile devices, MobileGaze, that is trained on the GazeCapture dataset. Gaze estimation is a regression task that determins the x,y coordinates on the screen that the user is looking at. I present a new model, MobileAttention, that determines whether or not the user is looking at the screen, a simpler classification task.
+Kernel-Level Optimizations:
+
+Utilizing kernel tricks is crucial for minimizing the impact on system resources. By leveraging inotify, a Linux kernel subsystem, the system monitors /dev/input/eventX files representing user input devices. This mechanism uses interrupts rather than polling, significantly reducing CPU load as it waits for specific file changes to signal user activity.For times when the user's focus shifts frequently, we employ the select syscall. This syscall efficiently manages multiple file descriptors, sleeping until it detects input activity or a timeout occurs, ensuring that our monitoring process remains lightweight.
+Innovative Use of System Calls and Multi-Threading:
+
+Given the non-blocking nature required, we integrate the select and poll syscalls to monitor user interactions. This allows our application to remain dormant until a significant event (like a change in the user's gaze) triggers it, thus conserving CPU cycles.In scenarios requiring immediate responsiveness, the application leverages multi-threading to handle input/output operations asynchronously. This parallel processing capability ensures that our application can perform intensive tasks without stalling the user interface.
+Configurability and Modular Design:
+
+My implementation is a program that takes pictures from the laptop camera and dims the screen if you're looking away for a user-defined amount of time. It uses a gaze estimation model tuned for edge-computing mobile devices, MobileGaze, that is trained on the GazeCapture dataset. Gaze estimation is a regression task that determines the x,y coordinates on the screen that the user is looking at. I present a new model, MobileAttention, that determines whether or not the user is looking at the screen, a simpler classification task.
 The result is a model that is incredibly efficient, both in terms of speed and FLOPs. 
 
 The pipeline is defined below:
@@ -28,6 +36,4 @@ The pipeline is defined below:
 
 Another important consideration is ongoing learning. Using the feedback from the user to continue to improve the model. A successful dim is defined also by the user with a default of 3s. If the screen is dimmed for 3 seconds, then it was worthwhile. Otherwise, the model should not have dimmed the screen.
 
-Underutilized feature: head pose estimators
-
-## Introducing: `attention`
+This system exemplifies how a seemingly small tweak—adjusting screen brightness based on attention—can lead to significant improvements in battery life and user experience. By embedding intelligent, context-aware capabilities into our devices, we can make them not only more efficient but also more intuitive to our needs.
