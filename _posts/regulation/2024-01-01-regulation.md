@@ -32,7 +32,7 @@ Both approaches implicitly use hints from the input through the triangle inequal
 
 <img src="/assets/regulation/search.png" alt="Uniform cost vs A* search"/>
 
-**Figure 1**. Uniform cost search *(left)* expands significantly more vertices than A* search *(right)* to find the shortest path.
+**Figure 1.1**. Uniform cost search *(left)* expands significantly more vertices than A* search *(right)* to find the shortest path.
   
 A* is an example of a machine that behaves rationally, because it chooses the best option at every turn. But the field of graph search is very much a tiny subset of AI. Though artificial intelligence is quite an enormous discipline, two abstract properties of any solution are how much *action* it requires and how much *rationality* is desired. Therefore, you can chart the field using quadrants to reason about the nature of problems.
   
@@ -40,7 +40,7 @@ Accordingly, machines that *behave humanly* act in a way that emulates understan
 
 <img src="/assets/regulation/quadrants.png" alt="The quadrants of AI"/>
 
-**Figure 2**. Artificial intelligence is divided into 4 quadrants based on the desired amount of action and rationality.
+**Figure 1.2**. Artificial intelligence is divided into 4 quadrants based on the desired amount of action and rationality.
 
 ## The philosophical approach
 
@@ -50,7 +50,7 @@ Laplace’s demon is a useful thought experiment because it shows the upper boun
 
 <img src="/assets/regulation/xor.png" alt="XOR of two variables"/>
 
-**Figure 3**. XOR of *k* variables cannot be approximated with less than *k* parameters.
+**Figure 1.3**. XOR of *k* variables cannot be approximated with less than *k* parameters.
 
 Luckily, real world trends are often explained by significantly less variables than go into the whole equation. That’s a good thing because though tomorrow's weather may be a chaotic function of some quadrillion variables representing particles in the atmosphere, I still need to know whether to pack an umbrella. If the underlying distribution takes a set of parameters, X, we can partition them into two sets, (X’, E), where X’ are the k most important variables, and E are the rest. The important k variables capture most of the variance, or the way the distribution changes with inputs. The number of selected variables, k, depends on how much of this variance we wish to capture and how many dimensions we’re comfortable dealing with. This process is called feature selection, which we do implicitly when thinking about complex distributions <small>(feature is our measurement of an underlying variable)</small>. When I consider the likelihood of eating at Chick-fil-A, I’m probably just thinking about my hunger level and distance to the nearest one, not the restaurant’s Yelp rating or the amount of fuel in my car. This conditional independence between insignificant variables is notated as P(f(x) \| x, e) = P(f(x) \| x); we can comfortably forget about e. This property has significant implications, and indeed it is what enables approximation. There are functions in lower dimensions that still capture most of the variance of more complex functions. We call these lower-dimension functions approximators or models. The rest of the variables are more like noise: essential for a perfectly accurate answer, but can be overlooked to capture the heart of the problem. It’s just like the saying, “if you can’t explain it simply, you don’t understand it well enough.” This saying itself models the idea behind the theory of approximation. How cool is that!
 
@@ -58,7 +58,7 @@ We've established that **approximation is capturing maximum variance using minim
 
 <img src="/assets/regulation/curse.png" alt="The curse of dimensionality visualized"/>
 
-**Figure 4**. Volume increases exponentially on the number of dimensions, causing the density of observations to decrease exponentially on the number of parameters.
+**Figure 1.4**. Volume increases exponentially on the number of dimensions, causing the density of observations to decrease exponentially on the number of parameters.
 
 ## The optimization approach
   
@@ -66,7 +66,7 @@ The curse of dimensionality is the arch nemesis of approximation, giving us a hu
 
 <img src="/assets/regulation/mlexample.png" alt="The machine learning example scatterplot"/>
 
-**Figure 5**. A set of observations *(purple)* initially approximated by the hypothesis parabola, y = x^2 + x + 1 *(blue)*.
+**Figure 1.5**. A set of observations *(purple)* initially approximated by the hypothesis parabola, y = x^2 + x + 1 *(blue)*.
 
 For example, let’s say I have black-box function *f*. I don’t know what it is, but I can evaluate it at arbitrary points. So I did that to produce 30 observations, (0, 4.2), (1, 7.9), (2, 12.4), (3, 21.7), … (29, 1687.3). From initial thoughts, maybe from domain knowledge, this seems like a quadratic relationship between x and f(x). So let’s start with the general quadratic equation, g(x) = ax^2 + bx + c, and figure out the 3 coefficients, a, b, and c, that minimize the difference between our prediction and the given answer. There are an infinite number of real valued parabolas, and each one is a hypothesis that we think could explain the data. Thus we need to search for the hypothesis that explains the data the best. It doesn’t matter which hypothesis we start with, so let’s pick (1, 1, 1). Our initial predictions are thus (0, 1), (1, 3), (2, 7), …, (29, 871); quite far off, but we’re on the right track. Our goal is to find the values of coefficients that minimize the difference between my predicted g(x) and the f(x) from the observations. In other words, Our task is finding some parameters that model a distribution, given a set of (feature, class) observations. In this case, we have 1 feature, x, and 1 class, y. The number of features is the dimensionality of the dataset, and the number of observations is the size. By running supervised learning on our model given the observations, we can figure out that the underlying distribution is y = 2x^2 + 4 with some random noise. That means the best hypothesis was (2, 0, 4). Note that “evaluating a black-box function” is exactly what surveys, real-world measurements, simulations, and experiments fundamentally are, and fitting a simpler function to those observations is machine learning.
 
@@ -74,7 +74,7 @@ But there are limits to this approach depending on what kind of function we use 
 
 <img src="/assets/regulation/taylor.gif" alt="Taylor series animation"/>
 
-**Figure 6**. Higher degree polynomials can approximate y = sin(x) more closely than lower degree.
+**Figure 1.6**. Higher degree polynomials can approximate y = sin(x) more closely than lower degree.
 
 This is a fundamental headache for machine learning practitioners. Not only does the curse of dimensionality compel us to use simple models, but even if we were to use infinitely complex models, we still couldn’t perfectly approximate functions over their whole domain. Machine learning experienced a long winter from 1987-1993 when researchers believed we couldn’t approximate useful enough real-world functions because they were too complex for our models and computers. But the computer engineers were cooking up better computers superlinearly, and the pipe dream quickly became feasible. We still needed better models than polynomials to make the most of the abundant compute and datasets. They came up with some clever techniques like progressively partitioning your inputs to reduce entropy (decision trees), and finding the high-dimensional plane that maximizes the distance between the closest points of different classes (support vector machines). They even composed many of these models in parallel (bagging) and series (boosting), because combining many simpler models stochastically makes the most of our limited data.
 
@@ -89,7 +89,7 @@ We’ve talked about models a lot so far, while assuming we know the likeliest h
   
 <img src="/assets/regulation/bayes.png" alt="Bayes's Rule"/>
 
-**Figure 7**. A prior belief can incorporate new information using a conditional probability.
+**Figure 1.7**. A prior belief can incorporate new information using a conditional probability.
 
 Semantic definitions of these 4 terms helps intuit through the implications. Note that I’m substituting A with h for hypothesis, and B with E for evidence.
 * Prior: How much did we believe this hypothesis before seeing the new evidence?
@@ -103,7 +103,7 @@ The optimization approach we use to find P(h \| E) is to formulate error as a fu
 
 <img src="/assets/regulation/gradient.jpg" alt="Gradient descent visualized in 3D"/>
 
-**Figure 8**. A parameterized function can be iteratively minimized by nudging each parameter in the *opposite* direction of its partial derivative.
+**Figure 1.8**. A parameterized function can be iteratively minimized by nudging each parameter in the *opposite* direction of its partial derivative.
 
 ## The deep learning approach
 
@@ -111,7 +111,7 @@ Taking the derivative of a neural network is a fascinating and strangely intuiti
 
 <img src="/assets/regulation/backprop.png" alt="Backpropagation computational graph"/>
 
-**Figure 9**. Input processing feeds forward, therefore contribution of error propagates backward due to the chain rule of Calculus.
+**Figure 1.9**. Input processing feeds forward, therefore contribution of error propagates backward due to the chain rule of Calculus.
 
 ## Finally, generative AI
 
@@ -123,10 +123,101 @@ It’s time for the paradigm shift I mentioned at the start of the article, from
 
 <img src="/assets/regulation/marginal.png" alt="The marginal expressed as a sequence"/>
 
-**Figure 10**. The marginal likelihood can be decomposed into a sequence of auto-regressive conditional probabilities.
+**Figure 1.10**. The marginal likelihood can be decomposed into a sequence of auto-regressive conditional probabilities.
 
 ## Morals of the story
 
 This top-down story consolidates the cognitive psychology, philosophy, optimization, Bayesian statistics, and finally deep learning perspectives on AI. You should understand that ChatGPT works under the same conceptual foundations as A* search. And I think there are two conflicting morals to this story. First, keep an open mind when making assumptions about the world. If someone else’s assumption is easier to explain while still explaining the data, then it’s probably more accurate than yours due to the curse of dimensionality. Humans are merely agents in a partially observable environment, and as such our observations are finite and biased. Choosing a simpler hypothesis allows you to make the most of your finite observations by learning the underlying trend instead of the points, just like believing in coincidences over ghosts, or even the line (2, 0, 4) over the line (10, -3, 13, 7). This simplicity-bias is known colloquially as **Occam’s razor**. Practically, it guides us to think simply and try out linear regression before neural networks. However, this story was just the theoretical side of the coin; back on Earth, we are practically limited by the speed and memory of computers and the quality and quantity of observations. But I will show that these limitations are lifting at an exponential rate, ultimately allowing us to reach said theoretical limits of our approximators.
 
 Finally, take that first moral with a huge grain of salt. By definition, machine learning is a dumb optimization algorithm that finds correlation between evidence and hypotheses. The simplest hypothesis that explains the data is usually a correlative relationship, not a causative one. This is precisely why models predict that being black or Muslim makes you more dangerous than being white, and being a woman makes you less suited for male-dominated careers; there are certainly such correlative relationships in our datasets, but relationships do not attempt to explain the true underlying distribution. Balancing the preference for simplicity with the preference for causation birthed the field of **AI Ethics & Safety**. And as people making models that can have a significant impact on the consumer’s life, it is our responsibility to stay vigilant of such dangerous correlations and stay skeptical of very high accuracy models. But I didn’t agree with this sentiment for a long time for the same reason I would take money from a lost wallet: if I don’t do it, someone else will. Caring about AI safety is at odds with accuracy, which is lethal in such a competitive and fast paced market. Free market forces should surely prefer companies that move fast and break things, right? But safety has tangible financial value, from a lucrative avenue for marketing to avoidance of potential lawsuits down the line. There is a third axis for the utility of models, which is alignment with good human ethos vs discriminatory bias. But whether companies actually do this hard work before plastering *“we care about AI safety!”* on their websites is another story…
+
+# Part 2: But approximation knows no bounds because of accelerating compute and data availability
+
+Next, I will prove that you do have sufficient resources (data, compute, time) through 5 trends in data collection and computer engineering. I will also show that these trends are sustainable due to their exponential nature, which enables this property for the foreseeable future.
+
+
+Part 1 was just the theoretical story of approximation. Here on Earth, we are practically limited by the speed/memory of computers and the quality/quantity of observations. So it’s only natural to assume that our innocent dream will face a disappointing wakeup when brought to the real world; after all, all ice cream cones melt and all bubbles pop. I mentioned that machine learning faced a long winter in the 70s because our models couldn't approximate useful real world phenomena. Their limitation was that “advancements in the size, complexities, and hyperparameters for deep neural networks significantly outpaced research in semiconductor technology that is core to any hardware system” ([*Waterloo Business Review*](https://medium.com/waterloo-business-review/the-hardware-bottleneck-for-artificial-intelligence-63c6c8ef4ad5)). Complex functions require more parameters to approximate, but the curse of dimensionality made this unfeasible. Still, humanity’s hunger for functions to approximate is exponentially growing, and we want Star Trek now! Let’s go through the 5 exponential trends that make this possible.
+
+
+Trend 1: **The number of transistors in a computer is increasing exponentially with time.** The speed of computer processors caught up to the expensive demands of deep learning, owing to the ingenuity of electrical and computer engineers. Gordon Moore picked up on this trend and modeled it as "the density of transistors will double every 18 months." Astoundingly, his approximation converged to the real world distribution of transistor density for nearly 3 decades.
+ How is transistor density related to clock speed? Why does higher transistor  density enable faster processors? - Quora 
+
+<img src="/assets/regulation/21transistors.jpg" alt="Moores law diagram"/>
+
+**Figure 2.1.** Single-CPU transistor density increased exponentially, but it has slowed to polynomial growth since 2005. Yet, the total number of transistors continues to increase exponentially due to the many-core trend ([*ResearchGate*](https://www.researchgate.net/publication/338517514_Retrospective_on_VLSI_value_scaling_and_lithography)).
+
+
+But why should software engineers care about transistor density in the first place? In other words what is the relationship between transistor density and speed of applications? It comes down to the clock speed and throughput of CPU instructions. Keeping transistors closer together means you can fit more of them on the same sized chip, which has 3 benefits:
+
+
+1. **Faster clock speed:** The propagation and wire delays within physical logic circuits gets smaller. This latency is already miniscule owing to the speed of electrons, but when each unit of computation takes less than a billionth of a second, this is the limiting factor.
+2. **Higher instruction throughput:** Having more transistors means you can do more each clock cycle. The microarchitecture can alleviate structural hazards, or when two instructions in the pipeline contend for the same resources, by having more total resources (ALUs, registers, cache).
+3. **Less electricity consumption:** Transistors take electricity to activate their output (gate-capacitance), and the resistance generates heat. But smaller transistors have smaller gate-capacitance, which means you can scale them up without paying the energy price.
+
+
+These effects cause processor throughput to increase linearly with transistor density, and transistor density increased exponentially with time. This trend is largely what carried the expensive deep learning architecture to achieve previously unimaginable results, because the cost of entry into the field reduced exponentially. In other words, the performance of deep learning models scales with computational power. However, the graph above has another key feature: single-CPU performance is only increasing polynomially as of 2005 (we’ll get into why transistor count is still exponential shortly). If processor throughput were to continue to increase polynomially, then that would have dramatic impacts on the future of humanity, because supply would not keep up with demand. There are two insurmountable reasons why deep learning is a computationally expensive problem:
+
+
+1. **Dataset size:** The required number of parameters is logarithmic on the complexity of the underlying trend - if there is twice as much information in the function, then it takes one more parameter in a binary encoding. However, the required number of observations is exponential on the number of parameters due to the curse of dimensionality, causing the required number of observations to be polynomial on the complexity of the underlying trend.
+2. **Convergence time:** The required number of iterations of gradient descent is polynomial on the number of parameters. This is because in every iteration, the derivatives must be computed for every parameter, and they must all be optimized to minimize the error function.
+
+
+Luckily, both of these reasons are polynomial, meaning deep learning is not NP-hard. As long as CPU speed kept increasing exponentially due to transistor density, this was fundamentally OK because we could brute force our problems. But now that single processor speed is only increasing polynomially, the overall increase of model accuracy should only increase polynomially as well! This will not do because we are hungry for better models.
+
+
+But don’t base your assumptions on a single graph. Let’s investigate why Moore’s law is dead using a tour through solid-state physics! Computer scientists can talk about logic all they want, but to implement it in the real world we need a material to encode multiple states. And to encode multiple states, the material must measurably change on an input. Ideally, the thing should be deterministic, easily measurable, and easily changeable. I could theoretically build a computer made of thermometers that measure how long I’ve been in a blanket, but this is inefficient for clear reasons. The material should also ideally use a **binary** encoding, because binary is the least noisy representation of information. It minimizes the entropy of noise of a signal, because there are no partial states ([*Stanford*](https://cs.stanford.edu/people/eroberts/courses/soco/projects/1999-00/information-theory/information_1.html)). Engineers tried vacuum tubes in digital circuits for a while, but these were very expensive to produce, needed constant current to operate, and broke more quickly than any item from AmazonBasics. No, humanity needed a more cheaply manufacturable yet robust device to fill this task.
+
+Enter the 14th group of the periodic table: elements with 4 electrons in their outermost shell. Recall that the valence shell is composed of 4 orbitals, 1 spherical low-energy s-orbital, and 3 hourglass higher-energy p-orbitals. Electrons fill up orbitals in increasing energy levels (Aufbau principle), and there can only be two electrons per orbital because spin value is binary and no two electrons can have the same 4 quantum numbers (Pauli exclusion principle and also pigeonhole principle), and since empty orbitals have lower energy than partially filled ones, electrons will fill up same-energy orbitals singly as much as possible before pairing up. Therefore, the electron configuration of this group ends with -ks2kp^2, where k is the level of the outermost shell. The two electrons in the p-orbitals partially fill two distinct orbitals, and they repel each other with a lot of disorder. These elements need 4 more electrons to fill the remaining spots in their p-orbitals, and this is desired because having a full valence shell is electrostatically stable. In this full configuration, each orbital is complete with two electrons of opposite spin, which allow the electrons to occupy the same spatial region more closely. Pairing opposite spin electrons is actually lower energy than fewer electrons being in their own orbital, because the opposite spin “cancels” out the mutually repulsive force. This is evident from the electron wave form, or the probability distribution of finding the electron in any region of space; electrons of same orbital but opposite spin have exactly flipped wave functions, which causes destructive interference and reduces the probability of finding the two electrons in the same region. Converting this quantum phenomena to classical logic, the electromagnetic repulsion is minimized when the valence shell is full because the symmetry and pairing keep the electrons far apart. Group 14 readily shares those electrons between themselves in covalent bonds where each participant shares  one of their electrons. The bonding structure is the truly interesting part here, where the 4 atoms form a super stable diamond structure. 
+
+When atoms are bonded, we refer to the joint structure of their valence shells as the valence band. This diamond structure completes their valence band with no extraneous free-moving electrons in the energy level above it, called the conduction band. This empty conduction band means group 14 compounds are normally electrically inert, or insulators. However, there is a special property here. The stable diamond structure precisely minimizes the energy gap between the bands, which makes it easy for electrons to hop into the higher conduction band if they get excited. Exciting electrons and thus populating the conduction band causes the compound to freely flow the electrons, which is the behavior of conductors. Thus, group 14 compounds under the right conditions are semiconductors, the most abundant element of them at room temperature being **silicon**! Phew, that was a lot of electrostatics. But don’t act like you never learned this if you took AP chemistry.
+
+That is exactly why silicon is the element of choice for our logic devices: there are two discrete states, insulator and conductor, which we can easily and near instantaneously control with thermal energy. We can even enhance the semiconductive properties by doping it with group 13 and 15 elements to create “holes” and extra electrons respectively. Group 13 has 3 valence electrons and needs an extra one to partake in this diamond covalent harmony, and group 15 has 5 valence electrons and needs to donate one to do the same. This increases the entropy of the resulting compound, reducing the amount of energy needed to excite valence electrons into the conduction belt, making it even easier for us humans to control the state. We call the electric switch that uses semiconductor to control the flow of electricity the transistor. Transistors are formed by sandwiching group-13-imbued-silicon between two group 15-imbued silicon, or vice versa. These two compounds are separated by a thin silicon dioxide layer called the channel, which is normally insulative. The effect is that applying a small voltage to the gate creates an electric field across the normally insulative channel, which is a pathway for current to cross. Applying a low voltage weakens that electric field. And the best part is you don’t need to maintain a current on this voltage after flipping the switch, hence the name solid-state. This property makes solid-state transistors highly power-efficient and reliable.
+
+Transistors can be theoretically shrunk to 5 *nanometers*. For reference, the radius of a silicon atom is .2 nanometers. A 2nm gate only has 10 silicon atoms total. The result is that the quantum effects (that are always present) become significant enough to affect the flow of electrons since there are such few of them at play here. Electrons can tunnel through the channel when you’re not looking, which defeats the logical purpose of a switch. Tunneling electrons also causes current to leak continuously, which defeats the efficiency purpose of solid-state electronics. Most importantly, the precision required to create such small transistors becomes incredibly high. Slight imperfections in the fabrication process cause silicon atoms to fall misplaced, which normally isn’t a problem since there’s so many of them. But this scale of transistors means if even 2 atoms are misaligned, the function of the transistor ceases. Thus, there is a theoretical limit to the size of transistors, and we have already reached that point…
+
+It's only natural to lay back and let humanity's demand exponentially outpace the speed of model performance. But don't give up just yet! The prominence of LLMs is proof that there is more to the story. These problems are melting away due to exponential trends in data science and computer architecture. Whereas the curse of dimensionality was an exponential trend against us, resource abundance is an exponential trend in our favor! This is opening the door to solve tasks of arbitrary size.
+
+
+Trend 2: **The throughput of parallelized processors is increasing exponentially with time.** Here is Moore’s law 2.0: the GPU! It's a dumb innovation, really. Engineers noticed they couldn’t keep increasing the speed of processors, so they decided to just put more of them on the same chip. But more processors only increases requirement 2 from above, higher instruction throughput, at the expense of 3, lower energy consumption. To alleviate this, they dumbed down each processor to where it can only perform a select few numeric operations, which reduces the number of transistors needed, and put thousands of them on a single chip. Therefore, this trend isn’t a direct replacement for Moore’s law because it doesn’t increase the speed of general computation, but rather only for highly parallelizable tasks. 
+
+
+There is a limit to the degree of parallelizability for a computation task that is succinctly captured by Amdal’s law. It states that “the performance improvement gained by optimizing a single part of a system is limited by the fraction of time that improved part is actually used.” However, the neural network forward-pass being a deterministic sequence of matrix multiplications plus simple nonlinear functions is incredibly parallelizable, and it’s the primary operation of gradient descent. Hence, why Nvidia is now a deep learning company, not a graphics company. However, if you were to run gradient descent indefinitely to converge to the global minimum of the loss function, you would simply overfit the training data. No, you need the number of observations to keep pace with the available compute, and for that you need a lot more sensors.
+
+<img src="/assets/regulation/22gpu.png" alt="The many-core GPU trend graph"/>
+
+**Figure 2.2.** The speed of GPUs continues to increase exponentially for parallelizable tasks due to exponentially more processing units ([*ResearchGate*](https://www.researchgate.net/figure/Performance-gap-between-many-core-GPU-and-multicore-CPU-20_fig1_51041816)).
+
+
+Trend 3: **The number of deployed sensors is increasing exponentially with time.** These are primarily internet connected devices that can communicate with each other. Such devices are getting exponentially cheaper due to innovation in the field of microchip design, and the demand for such devices is growing at around 18% annually. 18% doesn’t sound like a lot in the scope of this problem, but it is still exponential growth that is highly sustainable.
+
+<img src="/assets/regulation/23iot.png" alt="The IoT global market forecast"/>
+
+**Figure 2.3.** The number of deployed internet-connected devices is projected to increase by around 18% annually ([*IoT-Analytics*](https://iot-analytics.com/number-connected-iot-devices/)).
+
+
+Trend 4: **The number of publicly available data points is increasing exponentially with time.** As there are exponentially more deployed sensors, there is exponentially more data collected. Furthermore, connected sensors experience a network-effect, where each additional sensor communicates with other sensors to generate even more data. Think social media where each user generates data proportional to the number of friends. This phenomena causes the size of datasets to outpace the 18% growth of the number of sensors, and indeed dataset size is keeping remarkable pace with compute availability!
+
+
+<img src="/assets/regulation/24data.png" alt="Increasing dataset size for nl and vision graph"/>
+  
+
+**Figure 2.4.** Training dataset size for both natural language (left/purple) and vision tasks (right/green) is exponentially increasing with time ([*EpochAI*](https://epochai.org/blog/trends-in-training-dataset-sizes)).
+
+
+Trend 5: **The number of operations needed to train neural networks is increasing exponentially with time.** The number of iterations of gradient descent is proportional to the training set size, because each batch of observations requires an iteration of backpropagation. The benefit is that the model can approximate more complex distributions with a larger radius of convergence before overfitting the data. But this seems like a bad trend! If the required number of operations increases exponentially, doesn’t that require the speed of processors to also increase exponentially to account for it? No, like I explained in trend 2, we just need to rethink our assumptions about computation. Deep learning is a massively parallelizable task, making it scale well to increasing the total number of processors.
+
+
+<img src="/assets/regulation/25dl.png" alt="Increasing compute trend for deep learning graph"/>
+
+**Figure 2.5.** The amount of computation needed to train a model is exponentially increasing with time due to rising demands for approximation accuracy ([*DeciAI*](https://deci.ai/blog/problem-efficient-inference-deep-learning/)).
+
+
+This many-core GPU trend is far more sustainable than the shrinking transistors trend. Whereas the latter was a **convergent** trend where the distance to the goal (0nm) shrinks as you get closer, the former is a **divergent** trend, where there are fewer bounds to growth. And GPUs aren’t nearly the end of the story. The horizon of computation is very bright, with emerging fields promising massive speedups by reframing our assumptions yet again.
+
+
+* Tensor processing units, which is even further specialized hardware to pack more cores on a single chip to accelerate deep learning.
+* Quantum computing, which increases the degree of parallelization even more significantly than the many-core idea due to the principles of superposition and entanglement.
+* Distributed systems, which enable the production and consumption of massive datasets to promote speed and reliability, such that peons like us can access the throughput of thousands of computers.
+* Efficient training algorithms, which make the most of our compute by converging to the underlying function much faster.
+
+We are accustomed to thinking in terms of the single objective maximization framework of deep learning, which is to reduce bias and variance. But with so many people working on these adjacent fields, there are an incredible number of dimensions for us to consider. Therefore, it’s safe to say for the foreseeable future, there are enough resources.
