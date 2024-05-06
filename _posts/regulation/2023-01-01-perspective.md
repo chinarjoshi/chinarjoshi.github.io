@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identity digital biases and misinformation by augmenting your news with context
+title: Identity digital biases and misinformation by shifting where the news gets cleaned
 subtitle: The engineer's guide to fallibilism and pragmatism
 permalink: /perspective/
 category: regulation
