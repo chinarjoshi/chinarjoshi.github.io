@@ -38,7 +38,9 @@ A* is an example of a machine that behaves rationally, because it chooses the be
   
 Accordingly, machines that *behave humanly* act in a way that emulates understanding of human emotions and social context. For example, social robots, video game NPCs, and ChatGPT try to imitate human behavior, even if they don’t internally function that way. Machines that *behave rationally* act in a way that maximizes utility, but whether that’s for the good of the user or society is open for interpretation. For example, self-driving cars, smart energy grids, and stock trading algorithms make the optimal decision at every turn. These problems all have something significant in common; the correct answer is influenced by a lot of variables and is therefore difficult to find, but a good-enough answer can be **approximated** using fewer variables.
 
+<div style="display: flex; justify-content: center;">
 <img src="/assets/regulation/quadrants.png" alt="The quadrants of AI"/>
+</div>
 
 **Figure 1.2**. Artificial intelligence is divided into 4 quadrants based on the desired amount of action and rationality.
 
