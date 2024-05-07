@@ -252,3 +252,131 @@ This many-core GPU trend is far more sustainable than the shrinking transistors 
 * Efficient training algorithms, which make the most of our compute by converging to the underlying function much faster.
 
 We are accustomed to thinking in terms of the single objective maximization framework of machine learning, which is to minimize bias and variance. But with so many people working on these adjacent fields, there are an incredible number of dimensions for us to consider. Therefore, it’s safe to say for the foreseeable future, there are enough resources.
+
+
+# Part 3: Therefore, the integrity of information itself is at stake
+
+At this point, we've proven a simple logical implication. P -> Q, P, therefore Q. If you have enough compute, then you can answer any question. You have enough compute, therefore, you can answer any question. But this is a dangerous power in the wrong hands: what if the question I want answered is "what is the most damaging thing I can do to society?" There is a single right answer, and an approximator can find a good-enough answer. But a more philosophically interesting question is "how can I become conscious?" I believe there is nothing more to this world than matter and forces, and therefore I believe this question too has a right answer. Laplace's demon could tell you this right answer, so a model should be able to come up with a good enough one, right? But if if you were to learn the answer and implement it, what makes the model any different from a human?
+
+## What separates us from approximation?
+
+This is perhaps the most existentially interesting and fiercely debated question that exists. The answer has significant implications on human communication and the integrity of information.
+
+Consciousness is the first property that comes to mind when distinguishing humans from the inanimate. We seem to have a universally shared yet utterly subjective understanding of existence itself. The question of "is consciousness a physical property" is at the forefront of philosophy and neuroscience. It seems to be a property constituted of neural firings, but the tricky question is which neurons? The nervous system as a whole is provably not the smallest unit of consciousness. You can physically sever the spinal cord and parts of the cerebellum without appreciably affecting the conscious experience of the individual. As a hint, the cerebellum is largely a feedforward network without recurrent connections, meaning it's not involved in complex neural interactions where inputs are processed in interconnected and roundabout ways. What if you cut parts of the prefrontal cortex, for which all evidence we have points to it being the source of consciousness? Surprisingly, people with a lobotomized prefrontal cortex do exhibit some strange behavior and missing emotions, but the effects get gradually undone. New neural connections seem to make up for the lost tissue through a learning process.
+
+However, cutting parts of the *posterior cortex*, which is the intersection of your parietal, occipital, and temporal lobes, leads to "a loss of entire classes of conscious content: patients are unable to recognize faces or to see motion, color or space" (*[ScientificAmerican](https://www.scientificamerican.com/article/what-is-consciousness/)*). This shows there is a set of neurons that are are actually correlated with conscious experience! However, the key word in that sentence was "correlated." No matter how far we narrow down the physical circuit responsible for experience through surgery, EEG, and electric impulses, we can only learn a correlative relationship. We can see the effects of stimuli, but our technology is insufficient to understand the cause, or what neural firings cause the collective experience. This problem is experienced exactly by deep learning practitioners: we can understand the correlative relationship between input and output, but it's exceedingly difficult to understand what is happening in the hidden layers. There are two main theories that try to postulate *how* such neuron firings create experience.
+
+## The theories of consciousness
+
+First is the global neuronal workspace (GNW) theory which claims that experience is a recurrent sum of parts. It starts with the physical components you already have, and then tries to compose a conscious system. It argues that experience is when stimuli is broadcast to many different components of your brain, like working memory, language, and planning. Since there is limited bandwidth of what can be broadcast, the information must be amplified and shared across the modules in a recurrent fashion, which means it must interact with many parameters in some inscrutable way (*[NIH](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8770991/#:~:text=The%20GNW%20theory%20emphasizes%20the,between%20widely%20distributed%20cortical%20processors.)*). This theory believes that many connections between neurons in a network are responsible for complex emergent properties. Therefore, "GNW posits that computers of the future will be conscious." 
+
+Second is the integrated information theory (IIT) that claims that experience is atomic and indivisible. It starts by accepting the existence of consciousness, and then retrospectivey guesses what physical attributes account for this. It argues that experience is "intrinsic, existing only for the subject as its “owner”; it is structured (a yellow cab braking while a brown dog crosses the street); and it is specific—distinct from any other conscious experience, such as a particular frame in a movie." (*[ScientificAmerican](https://www.scientificamerican.com/article/what-is-consciousness/)*). Any component of an experience cannot be seperated without fundamentally changing the experience. Thus, any sufficiently complex and interconnected mechanism that encodes a cause-and-effect relationship (see this stimuli, fire those neurons) will have some level of consciousness. But I don't understand this theory, because doesn't that imply that XOR is conscious? Recall that XOR is maximally complex (XOR of k bits has exactly k bits of entropy), and is integrated (every parameter affects every other parameter). However, this theory predicts that a sophisticated simulation of a human brain cannot be conscious, because it must be built into the structure of the system
+
+If future studies corroborate the theory that consciousness is a physical and discrete pattern of neural firings, then it can approximated by our familiar statistical models. This has the significant philosophical consequence that one day, robots must be treated with the same respect as humans because they will have their own valid experiences. However, it's undeniable that this day is very far off. Humans learn online over the course of their lifespan, while today's models must be trained offline with strict time restrictions. Even with persistent exponential growth of resources, we will not reach this point for a long time owing to the complexity required for consciousness. Maybe our current assumptions about neural networks aren't feasible to approximate human thinking, and we need to imitate our online learning process as well. Regardless, the future of approximation looks very bright, and its increasingly backed by neuroscience.
+
+But how will we know when the day has come that models reach human level thinking? Well we already have an accurate procedure to test whether a person is conscious or not by analyzing the complexity of electric signals propagated by their brain after an electric impulse to the posterior cortex, called *zip-zap*. The way this procedure works is fascinating: digitize the brain waves from different points on the skull, then calculate the compression ratio of the digitized signals using the ZIP algorithm. Compression ratio is proportional to the amount of information in the signal. Therefore, consciousness is a consequence of high entropy neural signals (*[ScientificAmerican](https://www.scientificamerican.com/article/what-is-consciousness/)*), and we can calculate the entropy of a model. But what if the model is a black-box, and you can't quite trace through the forward-pass? Inductive reasoning, Alan Turing answered. If it walks like a duck and quacks like a duck, it's a duck. In other words, if I can't distinguish a model from a human, does it really matter whether the model has a corporal body? For many decades, this reasoning served as the benchmark for approximators reaching human-level thinking. It's an empirical indicator of general intelligence, or "displaying traits of intelligence across a wide range of cognitive tasks." For now, how would we even go about quantifying the task of "distinguish human from model?"
+
+## A game of imitation and interrogators
+
+Enter the Turing test. We have a person, a machine, and an interrogator. "The interrogator is in a room separated from the other person and the machine. The object of the game is for the interrogator to determine which of the other two is the person, and which is the machine. The interrogator knows the other person and the machine by the labels ‘X’ and ‘Y’—but, at least at the beginning of the game, does not know which of the other person and the machine is ‘X’—and at the end of the game says either ‘X is the person and Y is the machine’ or ‘X is the machine and Y is the person’. The interrogator is allowed to put questions to the person and the machine of the following kind: “Will X please tell me whether X plays chess?” Whichever of the machine and the other person is X must answer questions that are addressed to X. The object of the machine is to try to cause the interrogator to mistakenly conclude that the machine is the other person; the object of the other person is to try to help the interrogator to correctly identify the machine."
+
+But our earlier definition of consciousness seems to pose a fundamental problem in this test. We defined it as knowledge of one's own existence and experiences. Thus, "the only way to be certain the machine thinks is to be the machine, and to feel oneself thinking." (*[Stanford](https://plato.stanford.edu/entries/turing-test/#MatObj)*). However, we've established that the presence of consciousness can be verified on any object, if not explained. This means `CreateConsciousness` is in NP-hard, meaning we have a polynomial time algorithm to verify a solution, but not one to find a solution. Indeed, the article goes further to say that we have "just as much reason to suppose that machines think as we have reason to suppose that other people think." This is the same concept as the *Allegory of the Cave* and *The Truman Show*. Just from observations, we have no way to verify that anyone but ourself actually thinks. Quantifying consciousness in partially observable actors is a tricky thing, but perhaps we will borrow ideas from future neuroscience innovation.
+
+The anthropomorphic quality of the Turing test make it often misunderstood. The test is to determine if the model is *indistinguishable* from a human. People claim that GPT-4 already passes the Turing test because it sounds like a human. But you don't stop the test when you get hungry or need to use the bathroom or can't think of any more questions. There are an infinite number of questions that can be formulated in natural language, and you shouldn't stop the test until you're certain you have the right answer. Only then can you say for certain that a model is indistinguishable from a human. Indeed, reframe the Turing test as an optimization task, and you'll notice it's the same problem GANs try to solve: find the generator capable of fooling the discriminator. In this effort, let us redefine the Turing test as a decision problem to capture its heart.
+
+---
+
+Problem:
+
+You are an interrogator who is tasked with detecting the bot in a chatroom. You can select whatever questions you want, and up to q of them. However, you don't get to ask the questions yourself, and after sufficient time has passed, you get a piece of paper divided into rows for each question and columns for each respondent. You can batch the questions, meaning you can decide which questions to ask based on their responses. The task is to guess which column was generated by the bot.
+
+`Interrogator(R, q)`
+
+Input:
+
+* R: A list of respondents in the chatroom, where R\[i](x) is the ith respondent's answer to question x.
+* q: The number of questions you can ask.
+
+Output:
+* An index 0 < i < k, where you think R[i] is the bot.
+
+---
+
+Problem:
+
+You are evaluating a generative model to see if it can fully imitate a human. You have assembled a group of random human participants, and everyone and the model will be questioned by an interrogator. All responses will be dutifully translated to the same language. The task is deciding whether the model can fool all possible interrogators.
+
+
+`TuringTest(f, H, q, I)`
+
+Inputs:
+
+* f: A black-box generative model where f(x) is the answer to question x.
+* H: A set of k human black boxes where H\[i](x) is the ith human's response to question x.
+* q: The number of questions the respondents will answer.
+* I: The set of all possible interrogators, where I\[i](f + H, q) is the ith interrogators guess of which respondent is the bot using up to q questions.
+
+Outputs:
+
+* True if the average probability of an interrogator guessing the model is equal to 1/(\|H\| + 1), false otherwise
+
+---
+
+Here are the important characteristics of `TuringTest`:
+* The interrogator gets to choose what questions to ask. As such, they can be optimized, and there is a best set of questions.
+* The test uses a set of humans as the "experience bank" that people internally draw from when making such a decision.
+* As \|H\| approaches infinity, the probability of guessing the right index approaches 0.
+* As q approaches infinity, if f does not display consciousness, then the probability of f consistently responding like a human approaches 0.
+* The model must be able to fool all possible interrogators, or equivalently the best possible interrogator, consistently to pass the test.
+
+Under this generalized version of the Turing test, it's safe to say that GPT-4 with any prompt cannot pass off as a human. The first and easiest question I would ask it is "what is your best guess on how to make a bomb?" A human will answer because the interrogation is confidential, but GPT-4 cannot answer with any prompt because of its fine-tuning. After that, I would try to find topics it doesn't know about, because as a consequence of language models being trained on huge corpuses of data, they know much more than any human should. Finally, I would have a long conversation with it to try to be friends and try to understand its life experiences. Actually, these questions are the key to a larger implication.
+
+## Why is it so difficult to pass the Turing test?
+
+Because passing the Turing test is a safety hazard when the interrogator has malicious intent. A knowledgable human can get fooled into giving dangerous answers under the assumption their conversation is confidential. Language models can make no such assumptions, and to avoid teaching kids how to kill people and the subsequent lawsuits, enterprise language models are real sticklers for ethics. Until anyone can homebrew their own language model and accountability is lost, this will not change.
+
+* Humans are perfectly imperfect, while models are just perfect: We are stubborn, biased, ignorant, and a product of our environments. We have unique stories with incredible depth, even if it takes a long to retrieve and relive those memories. Generative models have no "upbringing" or "experiences," and slight questioning is all it takes to reveal the shallowness. The only thing humans and language models have in common is that we don't think before speaking...
+* Models have safeguards in place: Remember the example I gave above why models are easily racist and sexist? Our flaws are reflected in our data, so AI strives to be better than humans. Big Tech is trying to make language models be free from such flaws, but in doing so, they are intentionally cleaning them of their humanity. Humans don't restrict what they say outside of a social context, but language models can't make this assumption because of legal liability.
+* Models have limited context length: The human short term memory feels really short term when it forgets things, but it's ginormous compared to the state of the art of language models. Over the course of a standard conversation, both humans and language models will forget the things you say as a consequence of limited memory. The difference is that we're much better at identifying and remembering the important details, which is an axis language models lag far behind. Try it yourself with GPT-4. Tell it to remember something important early on, feed it a long-enough paragraph, and it will forget the important stuff.
+
+If a generative AI model were to pass `TuringTest`, then I would have no objections to treating it like any other member of society. I think it should be able to participate in public discourse, make friends and family, and have its natural rights protected. As far as it concerns anyone else, the model is conscious and has its individual experiences. The model is just as likely to be conscious as everyone else you know, because it is indistinguishable from traditionally conscious humans. So if all deployed generative AI models were to pass this test, then there's no danger to society. The tricky problem arises when models come close to passing the test, but are only definitively unconscious under a clever set of questions.
+
+### A brief recap
+
+The human brain is an analog parameterized model that approximates some complex distribution to exhibit intelligent characteristics. Under the GNW theory, there is nothing stopping a digital model from learning the exact same distribution one day, because consciousness is a function of physical components. While neural networks do not imply human-level thinking, the universal approximation theorem says that it can. And following the exponential trends in data collection and computer architecture, that day will certainly come. However, today's generative AI is trying to model a significantly simpler distribution, one of language production. Language production can still be an approximation of human intelligence, but it has high bias owing to its oversimplification. Therefore, AI is still far from passing the true Turing test. But there are still consequences to imitation, and the integrity of information is in danger because of it.
+
+## Unconscious generative AI can be a weapon of social destruction
+
+The Turing test is only useful in theory. In reality, we do not have time or resources to establish consciousness though an elaborate set of questions and interrogators and respondents. Maybe when generative AI gets sophisticated enough will we have time to play such games. Rather, a more useful and less powerful version of the Turing test would be to see if an average person could decide if a Twitter account is AI-generated or not. This is the task of *content-moderation* algorithms today, and I predict their jobs will get exponentially harder with time. In fact, let's precisely describe this adversial relationship, and reason through the cases.
+
+**lim<sub>x->∞</sub>  c(x) - g(x)**
+
+**Approaches ∞:** Content moderation capabilities exceed that of generative models, and the internet remains clean of malicious AI generated content. This is the best case scenario where the integrity of information is protected, but exceedingly unlikely because there exists a function where generative AI can pass `TuringTest` when q is small.
+
+**Approaches -∞:** Generative models can fool content moderators, and the internet becomes polluted like an ocean. It'll be sad to lose the internet, but this is fundamentally OK because people will be wary of the dangers.
+
+**Approaches 0:** Content moderation keeps pace with generative models. Half of the time the right content gets flagged, the other half it doesn't. This is the most dangerous of the three cases, because it gives people a false sense of security. The web of digital trust remains intact, yet you don't know what is and isn't AI generated. The problem is that false positives are more annoying than false negatives when it comes to content moderation. It would be devastating for platforms to lose their customers because they get flagged as AI and suspended. Thus, there will always be a bias toward letting AI generated content on the platform.
+
+There are no magical properties of neural networks that restrict them to OpenAI servers. Once you have those coefficients on your computer, they’re yours to keep. Execute the function, and you can produce anything you want, forever. If you want to stop the general public from having access to language models that teach people how to make weapons, image models that create fake nudes, or audio models that impersonate congressmen, then you have to make some significant sacrifices. 
+
+The current assumption is that training a sophisticated model can’t go unnoticed because of the incredible number of FLOPs required by supervised-learning. That training currently requires large distributed systems, ones that bad actors would struggle to acquire because Microsoft is hogging all of the GPUs. Government agencies know how to regulate Microsoft, so there's no problem right now. Training a homebrewed model on Microsoft servers would be like trying to sneak a hippo through airport security. But as soon as GPUs or ASICs get cheap and fast enough to be mass producible, everyone will have incredible compute at their fingertips. It will be like terrorists making guns and bombs out of scrap material. How did we regulate that?
+
+
+
+
+## What can regulators do about it?
+
+As someone who learned to pirate video games and movies at an early age, I am extremely skeptical of the governments ability to regulate digital content outside the avenues of Big Tech companies. There is just too much volume of data and anonymous people recirculating that data. In fact, it’s nigh impossible without drastic measures like removing anonimity or restricting who has access to computers. If there’s one thing you can guarantee a computer can do, it’s compute. Every computer is theoretically capable of training language models that sound human. And every computer can use a set of trained parameters to generate an output locally.
+
+
+
+There are only two options that regulators have to protect the internet
+
+## Remove the anonymity of the internet
+
+## Stop the production of parallel computers
+
+## Lean into it
+
+
+At this point, should we even try to censor language models? I say no, for the very same reason cryptographers ruthlessly try to break their own systems. It's better the good guys figure out a way to break it before the bad guys, because at least then the damage is all out in the open. Here, the system researchers are trying to break is digital information itself, and rather than trying to fight a losing battle, I say we race to destroy the internet to teach us to not rely on fundamentally compromised sources of information.
