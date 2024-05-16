@@ -115,30 +115,24 @@ The optimization approach we use to tune $$P(h \mid E)$$ is to formulate error a
 
 ## The deep learning approach
 
-Taking the derivative of a neural network is a fascinating and strangely intuitive inductive process. The network is a function $$f$$ defined as:
+Taking the derivative of a neural network is a fascinating and strangely intuitive inductive process. Each neuron is a function $$g$$ defined simply as:
 
-$$f(X, L_1, L_2, …, L_k)$$
+$$g(a, X, Z) = a(X \cdot Z)$$
+
+Inputs:
+* $$a : \mathbb{R} \rightarrow \mathbb{R}$$: A nonlinear activation function
+* $$X \in \mathbb{R^k}$$: The input vector.
+* $$Z \in \mathbb{R^k}$$: The parameter vector.
+
+---
+
+The network is a function $$f$$ defined as:
+
+$$f(X, L_1, L_2, …, L_k) = L_k(L_{k-1}(\cdots L_1(X)\cdots))$$
 
 Inputs:
 * $$X \in \mathbb{R^k}$$: The input vector.
 * $$L_i$$: A set of neurons in layer $$i$$, where the size of $$L_i$$ is equal to the output size of $$L_{i-1}$$.
-
-Output:
-* $$L_k(L_{k-1}(L_{k-2}(\cdots L_1(X)\cdots)))$$.
-
----
-
-Each neuron is a function $$g$$ defined as:
-
-$$g(X, Z, a)$$
-
-Inputs:
-* $$X \in \mathbb{R^k}$$: The input vector.
-* $$Z \in \mathbb{R^k}$$: The parameter vector.
-* $$a : \mathbb{R} \rightarrow \mathbb{R}$$: A nonlinear activation function
-
-Output:
-* $$a(X \cdot W)$$.
 
 ---
 
