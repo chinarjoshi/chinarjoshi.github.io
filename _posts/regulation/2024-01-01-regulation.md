@@ -97,11 +97,11 @@ We’ve talked about models a lot so far, while assuming we know the likeliest h
 
 **Figure 1.7**. A prior belief can incorporate new information using a conditional probability.
 
-Semantic definitions of these 4 terms helps intuit through the implications. Note that I’m substituting A with h for hypothesis, and B with E for evidence.
-* Prior: How much did we believe this hypothesis before seeing the new evidence?
-* Marginal: How likely is seeing this evidence across all possible hypotheses?
-* Likelihood: How likely is seeing this evidence under this hypothesis?
-* Posterior: How much do we believe this hypothesis in light of the new evidence?
+Semantic definitions of these 4 terms helps intuit through the implications:
+* <i>Prior</i>: How much did we believe this hypothesis before seeing the new evidence?
+* <i>Marginal</i>: How likely is seeing this evidence across all possible hypotheses?
+* <i>Likelihood</i>: How likely is seeing this evidence under this hypothesis?
+* <i>Posterior</i>: How much do we believe this hypothesis in light of the new evidence?
 
 Our objective is to explicitly **model the posterior, $$P(h \mid E)$$**, and Bayes’s rule gives us the probabilistic machinery to calculate this. Starting with our current belief of this hypothesis, we incorporate the newly seen data through the ratio of the likelihood to the marginal likelihood. If this ratio is greater than 1, that means you’re likelier to see this data whenever h is true than under all possible hypotheses. Bayes’s rule is fundamentally an update step, one we take successively in order to learn. Our practical problem is that the likelihood and marginal are really difficult to model directly; how do you even answer the question “how likely is the air pressure to be 1.45atm?” Modeling the marginal is hard because it requires integrating over all possible hypotheses, and the number of hypotheses is exponential on the number of parameters. Modeling the likelihood is hard because it requires data that encompasses all variables at play; if you leave out significant latent variables, then the distribution is off even when you know when h is true. That’s why we implicitly model these two distributions together via the observation set. It’s less powerful because you can’t extract the marginal or likelihood, but combining them together is significantly easier to learn. Thus, our traditional supervised-learning approach to regression and classification problems is explicitly modeling the posterior distribution, allowing us to discriminate between different hypotheses to find the likeliest one given data.
 
