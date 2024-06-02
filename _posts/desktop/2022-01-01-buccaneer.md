@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stream any digital media for free without the buffering and shady websites
-subtitle: The paradox of the subscription model
+subtitle: The paradox of the subscription model (011)
 permalink: /buccaneer/
 category: desktop
 type: solution

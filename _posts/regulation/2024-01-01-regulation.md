@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regulators can dull, but never declaw GenAI due to Moore’s law
+title: Regulators can never declaw GenAI due to Moore’s law
 permalink: /regulation/
 category: regulation
 type: problem

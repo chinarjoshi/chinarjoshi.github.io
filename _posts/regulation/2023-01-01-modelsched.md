@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A labor-market approach to model inference scheduling in soft-real-time systems
-subtitle: The beauty of algorithmic transferability
+subtitle: The beauty of algorithmic transferability (112)
 permalink: /modelsched/
 category: regulation
 type: solution

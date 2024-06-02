@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize your Downloads into smart subfolders and archives
-subtitle: How ChatGPT makes for the best digital housekeeper
+title: Organize your file system into semantic subfolders and archives
+subtitle: How ChatGPT makes for the best digital housekeeper (001)
 permalink: /declutter/
 category: desktop
 type: solution

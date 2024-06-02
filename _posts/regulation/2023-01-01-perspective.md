@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Identity digital biases and misinformation by shifting where the news gets cleaned
-subtitle: The engineer's guide to fallibilism and pragmatism
+title: Identity digital dirt by shifting where your news gets cleaned
+subtitle: The engineer's guide to fallibilism and pragmatism (022)
 permalink: /perspective/
 category: regulation
 type: solution

@@ -11,6 +11,7 @@ RUN rm -rf /var/cache/apk/*
 
 # Install Jekyll and required gems
 COPY Gemfile .
+COPY Gemfile.lock .
 RUN gem install bundler
 RUN bundle install
 RUN mkdir /home/site
