@@ -24,30 +24,14 @@ Software ages like fine milk. To keep it from spoiling, it takes a team of dedic
     I don't have 3 years, but I do have a proposition. If an idea piques your interest, please implement it yourself. It's a win-win because you get to sharpen your coding knives on a pre-designed insightful project, and I get to play with a new toy at the end of it. For those want to enter open source development, this is the perfect place to start because there is 0 bureaucracy. If you decide to adopt an idea, then let me know <a href="mailto:chinarjoshi7@gmail.com">here</a> so I can mark the article and contribute any time I can. To help you decide, I've ternary encoded some metadata for each idea as a number (\(d_2d_1d_0\)) = (progress, time commitment, AI stack position)
 
     <table>
-        <tr>
-            <th></th>
-            <th>0</th>
-            <th>1</th>
-            <th>2</th>
-        </tr>
-        <tr>
-            <th>\(d_2\)</th>
-            <td>Article unpublished</td>
-            <td>Waiting for adoption</td>
-            <td>Implementation underway/complete</td>
-        </tr>
-        <tr>
-            <th>\(d_1\)</th>
-            <td>Straightforward (50hrs)</td>
-            <td>Challenging (120hrs)</td>
-            <td>Good luck... (250+hrs)</td>
-        </tr>
-        <tr>
-            <th>\(d_0\)</th>
-            <td>Traditional, deterministic software</td>
+        <tr> <th></th> <th>0</th> <th>1</th> <th>2</th> </tr>
+        <tr> <th>\(d_2\)</th> <td>Article unpublished</td>
+            <td>Waiting for adoption</td> <td>Implementation underway/complete</td> </tr>
+        <tr> <th>\(d_1\)</th> <td>Straightforward (50hrs)</td>
+            <td>Challenging (120hrs)</td> <td>Good luck... (250+hrs)</td> </tr>
+        <tr> <th>\(d_0\)</th> <td>Traditional, deterministic software</td>
             <td>Built upon foundational models</td>
-            <td>Requires model training or data collection</td>
-        </tr>
+            <td>Requires model training or data collection</td> </tr>
     </table>
   </details>
   
@@ -85,7 +69,7 @@ Software ages like fine milk. To keep it from spoiling, it takes a team of dedic
               <h3 class="solution-title">
                 <a href="{{ post.url }}"> {{ post.title }} </a>
               </h3>
-              <small>Plus,</small> <span class="solution-subtitle"> {{ post.subtitle }} </span>
+              <small>Plus,</small> <span class="solution-subtitle"> {{ post.subtitle }} <small>{{ post.metadata }} </small> </span>
               <br>
                 
               <small class="solution-text">

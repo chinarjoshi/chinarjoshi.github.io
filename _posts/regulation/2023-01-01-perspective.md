@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Identity digital dirt by shifting where your news gets cleaned
-subtitle: The engineer's guide to fallibilism and pragmatism (022)
+subtitle: The engineer's guide to fallibilism and pragmatism
+metadata: (022)
 permalink: /perspective/
 category: regulation
 type: solution

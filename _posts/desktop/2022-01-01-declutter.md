@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Organize your file system into semantic subfolders and archives
-subtitle: How ChatGPT makes for the best digital housekeeper (001)
+subtitle: How ChatGPT makes for the best digital housekeeper
+metadata: (001)
 permalink: /declutter/
 category: desktop
 type: solution

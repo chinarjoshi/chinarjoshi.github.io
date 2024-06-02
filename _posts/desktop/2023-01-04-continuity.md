@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Enable the perfect virtual assistant by capturing your life in real-time
-subtitle: Designing an effective dataset with OS principles (112)
+subtitle: Designing an effective dataset with OS principles
+metadata: (112)
 permalink: /continuity/
 category: desktop
 type: solution
