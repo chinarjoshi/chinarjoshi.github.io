@@ -53,7 +53,32 @@
 }
 
 .board > div > div:not(:last-child) {
-    border-bottom: 1px solid #ccc; /* Change the color and thickness as needed */
+    border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
     margin-bottom: 20px;
+}
+
+.custom-note {
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-note summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #DFDFEB;
+    border-radius: 4px;
+    outline: none;
+}
+
+.custom-note[open] summary {
+    border-bottom: 2px solid #B6B6C1;
+}
+
+.custom-note p {
+    padding: 10px;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    margin: 0;
 }
