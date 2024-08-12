@@ -2,7 +2,7 @@
 layout: post
 title: Unit test LLM prompts through embeddings
 subtitle: Coping with nondeterminism in language models
-metadata: (001)
+metadata: (101)
 permalink: /determinist/
 category: non-programming
 type: solution
