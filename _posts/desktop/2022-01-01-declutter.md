@@ -7,7 +7,8 @@ permalink: /declutter/
 category: desktop
 type: solution
 ---
-Let’s face it: your Downloads folder is a mess, and you’re ashamed of it. But it’s not your fault. Despite the advancements in desktop automation, filesystem organization remains a manual chore—an outdated software convention that hasn't kept pace with modern needs. Imagine the Downloads folder as the inbox of your file system, a space you likely interact with more frequently than your email. Yet, unlike email, which offers various tools to manage the influx, the Downloads folder demands that you suffer the consequences of its clutter each time you access it, whether it's the mental overhead or the sluggish response of your file explorer.
+
+Your Downloads folder is a mess, and you don't have time to do anything about it. Despite mindblowing advancements in task automation, filesystem organization remains a manual chore—an outdated software convention that hasn't kept pace with modern needs. Imagine the Downloads folder as the inbox of your file system, a space you likely interact with more frequently than your email. Yet, unlike email, which offers various tools to manage the influx, the Downloads folder demands that you suffer the consequences of its clutter each time you access it, whether it's the mental overhead or the sluggish response of your file explorer.
 
 ## **DISCLAIMER:** Most of this rough draft was written by GPT-4 given my ideas. As such, the content is incomplete and factually ungrounded. Please check back in 2 weeks for the full version now that I have free time.
 
