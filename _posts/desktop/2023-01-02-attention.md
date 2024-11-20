@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Save an hour of battery by dimming the screen when you look away
-subtitle: Optimizing local vision through compression and sleep
+# subtitle: Optimizing local vision through compression and sleep
+subtitle: Defeating perceived latency using tiny models and Pareto-navigation
 metadata: (011)
 permalink: /attention/
 category: desktop
